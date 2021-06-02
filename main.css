@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@700&family=Noto+Serif+JP&display=swap');
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-size: 1.1rem;
+    font-family: 'Newsreader', 'Noto Serif JP', serif;
+	font-weight: 700;
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 80px;
+}
+.lead, .card-header, .card-title {
+	font-weight: inherit;
+}
+
+span {
+	display: inline-block;
+}
+
+nav {
+	border-bottom: 1px solid #b0c4de;
+	padding-bottom:0 !important;
+	font-weight: bold;
+}
+
+nav .nav-item a.active {
+	color: #0000cd !important;
+	border-radius: .4em;
+}
+a:hover {
+	color: red !important;
+	text-decoration: underline;
+}
+
+
+#top_name {
+	font-size: 1.8rem;
+	color: #00008b;
+}
+
+section {
+	margin-top:-10px;
+	padding-top:80px;
+}
+
+.section_title {
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: white;
+	background-color: #5179f1;
+	text-align: center;
+	padding-top: .6rem;
+	padding-bottom: .4rem;
+	border-radius: .2em;
+}
+
+.subtitle {
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #00008b;
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.bgcolor2 {
+	background-color: #e8f0ff;
+}
+
+article.work {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+#publications li {
+    font-family: 'Noto Serif JP', serif;
+	font-weight: 400;
+	font-size: 1rem;
+	margin-top: 0.6rem;
+}
+
+#publications .badge {
+	font-size: .8rem;
+}
+
+#google_scholar_top {
+	border: 1px solid #00008b;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+}
+#google_scholar_bottom {
+	border: 1px solid #00008b;
+	border-top: none;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
