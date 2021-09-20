@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ja">
+
+<head prefix=”og: http://ogp.me/ns#”>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../main.css">
+  <link rel="stylesheet" href="../software.css">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://HidekiA.github.io/favicon.ico">
+
+  <meta property="og:url" content="https://HidekiA.github.io/software/browser_switch/index_ja.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BroserSwitch" />
+  <meta property="og:description" content="BroserSwitch は、メールやエクセルファイル等に記載されたURLをクリックした際に、そのURLに応じて異なるブラウザで開くためのソフトウェアです。" />
+  <meta property="og:site_name" content="Hideki AOYAMA" />
+  <meta property="og:image" content="https://HidekiA.github.io/img/BrowserSwitch/BrowserSwitch.png" />
+
+  <title>BrowserSwitch [日本語版]</title>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-76E3Z92W8L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-76E3Z92W8L');
+  </script>
+  
+</head>
+
+<body class="" data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-offset="80">
+
+  <nav id="navbar-main" class="navbar navbar-expand-sm navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://HidekiA.github.io">
+        <img src="https://HidekiA.github.io/img/icon.png" alt="" width="36" height="36" class="mb-2">
+      </a>
+  </nav>
+
+  <section id="top" class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col col-sm-6 text-center fw-bold" id="top_name">
+        BrowserSwitch
+      </div>
+      <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+        <img src="./BrowserSwitch.png" alt="" class="mw-100">
+      </div>
+    </div>
+  </section>
+
+  <section id="top" class="container">
+      <a href="./index.html">[English version]</a>
+  </section>
+
+  <section id="top" class="container">
+    <div class="title">概要</div>
+    <div class="content">
+      メールやエクセルファイル等に記載されたURLをクリックした際に、そのURLに応じて異なるブラウザで開くためのソフトウェアです。<br>
+      <br>
+      用途（作成理由）：<br>
+      社内システムが Internet Explore (IE) にしか対応していないといった環境で、社内システム用には IE、その他のサイトはお気に入りのブラウザで開くことができます。<br>
+      <br>
+      注意：<br>
+      ブラウザ内でリンクをクリックしたときには、そのままそのブラウザで開かれます。BrowserSwitch は他のソフトウェアからブラウザを開くときにだけ使用されます。<br>
+      （最近は社内ページでも Office 365 の関係で IE に完全には対応していないページがあったりするのですが、IE でそういったページへのリンクをクリックしても別のブラウザで開くことは残念ながらできません。）
+    </div>
+  </section>
+
+  <section id="top" class="container">
+    <div class="title">ダウンロード</div>
+    <div class="content">
+      <a href="./bin/BrowserSwitchSetup_2_0_ja.msi">BrowserSwitch 2.0</a>
+    </div>
+  </section>
+
+  <section id="top" class="container">
+    <div class="title">インストール</div>
+    <div class="content">
+      <ol>
+        <li>インストーラを実行する。</li>
+        <li>Windowsの設定の「既定のアプリ」が開かれるので、「既定のブラウザー」に BrowserSwitch を選択する。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="top" class="container">
+    <div class="title">設定</div>
+    <div class="content">
+      実行ファイルと同じディレクトリに置かれたレシピファイル BrowserSwitchRecipe.ini に設定を記述します。<br>
+      （ショートカットがスタートメニューに登録されます）<br>
+<pre>
+#（例）
+[Rules]
+intranet.co.jp=ie
+www.office.com=edge
+www.mozilla.org=firefox
+otherwise=chrome
+
+[Browsers]
+chrome=C:\Program Files\Google\Chrome\Application\chrome.exe
+firefox=C:\Program Files\Mozilla Firefox\firefox.exe
+</pre>
+      
+      [Rules]<br>
+      <ul>
+        <li>keyword=browser_name<br>
+          左辺のキーワードを含むURLを右辺のブラウザで開きます。</li>
+        <li>"otherwise" というキーワードは全てのURLに合致し、ローカルの html ファイルを開く場合にも使われます。</li>
+        <li>大文字小文字の区別があり、空白を無視しません。</li>
+        <li># で始まる行はコメントとして無視されます。</li>
+      </ul>
+      [Browsers]<br>
+      <ul>
+        <li>[Rules] で指定したブラウザのパスを記述します。</li>
+        <li>"edge" と "ie" はブラウザ名としてあらかじめ定義されています。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="top" class="container">
+    <div class="title">アンインストール</div>
+    <div class="content">
+      Windows の設定の「アプリ」から BrowserSwitch を選び、アンインストールしてください。
+    </div>
+  </section>
+<!-- 
+  <section id="top" class="container">
+    <div class="title">更新履歴</div>
+    <div class="content">
+      <ul>
+        <li>1.0 公開</li>
+      </ul>
+    </div>
+  </section>
+-->
+
+  <section id="top" class="container">
+    <div class="title">ライセンス</div>
+    <div class="content">
+      Copyright © 2018-2021 Hideki AOYAMA<br>
+      <br>
+      以下に定める条件に従い、本ソフトウェアおよび関連文書のファイル（以下「ソフトウェア」）は商用・非商用問わず無償でご利用いただけます。<br>
+      <br>
+      上記の著作権表示および本許諾表示を、ソフトウェアのすべての複製または重要な部分に記載するものとします。<br>
+      <br>
+      ソフトウェアは「現状のまま」で、明示であるか暗黙であるかを問わず、何らの保証もなく提供されます。ここでいう保証とは、商品性、特定の目的への適合性、および権利非侵害についての保証も含みますが、それに限定されるものではありません。 作者または著作権者は、契約行為、不法行為、またはそれ以外であろうと、ソフトウェアに起因または関連し、あるいはソフトウェアの使用またはその他の扱いによって生じる一切の請求、損害、その他の義務について何らの責任も負わないものとします。<br>
+      <br>
+      再配布等については作者の許諾を得てください。<br>
+    </div>
+  </section>
+
+  <section id="top" class="container">
+    <div class="title">コンタクト</div>
+    <div class="content">
+      <img src="../../img/mail_01.png" alt="" class="" height="20px"><img src="../../img/mail_02.png" alt="" class="" height="20px">
+    </div>
+  </section>
+
+</body>
+</html>
