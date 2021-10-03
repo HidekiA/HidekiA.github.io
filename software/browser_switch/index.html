@@ -71,7 +71,7 @@
   <section id="top" class="container">
     <div class="title">Download</div>
     <div class="content">
-      <a href="./bin/BrowserSwitchSetup_2_0_en.msi">BrowserSwitch 2.0</a>
+      <a href="./bin/BrowserSwitchSetup_2_1_en.msi">BrowserSwitch 2.1</a>
     </div>
   </section>
 
@@ -103,14 +103,16 @@ chrome=C:\Program Files\Google\Chrome\Application\chrome.exe
 firefox=C:\Program Files\Mozilla Firefox\firefox.exe
 </pre>
       
+      <ul>
+        <li>The setting is case-sensitive and whitespace is NOT ignored.</li>
+        <li>Lines start with # are ignored as comments.</li>
+      </ul>
       [Rules]<br>
       <ul>
         <li>keyword=browser_name<br>
           The URL containing the text on the left will be opened in the browser on the right.</li>
         <li>"otherwise" matches any URL.<br>
           "otherwise" is also used to open local .html files.</li>
-        <li>This is case-sensitive and whitespace is NOT ignored.</li>
-        <li>Lines start with # are ignored as comments.</li>
       </ul>
       [Browsers]<br>
       <ul>

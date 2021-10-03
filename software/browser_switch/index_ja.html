@@ -72,7 +72,7 @@
   <section id="top" class="container">
     <div class="title">ダウンロード</div>
     <div class="content">
-      <a href="./bin/BrowserSwitchSetup_2_0_ja.msi">BrowserSwitch 2.0</a>
+      <a href="./bin/BrowserSwitchSetup_2_1_ja.msi">BrowserSwitch 2.1</a>
     </div>
   </section>
 
@@ -104,13 +104,15 @@ chrome=C:\Program Files\Google\Chrome\Application\chrome.exe
 firefox=C:\Program Files\Mozilla Firefox\firefox.exe
 </pre>
       
+      <ul>
+        <li>大文字小文字の区別があり、空白を無視しません。</li>
+        <li># で始まる行はコメントとして無視されます。</li>
+      </ul>
       [Rules]<br>
       <ul>
         <li>keyword=browser_name<br>
           左辺のキーワードを含むURLを右辺のブラウザで開きます。</li>
         <li>"otherwise" というキーワードは全てのURLに合致し、ローカルの html ファイルを開く場合にも使われます。</li>
-        <li>大文字小文字の区別があり、空白を無視しません。</li>
-        <li># で始まる行はコメントとして無視されます。</li>
       </ul>
       [Browsers]<br>
       <ul>
