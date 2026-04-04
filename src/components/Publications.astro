@@ -2,11 +2,11 @@
 import publications from '../content/publications.json';
 ---
 
-<section id="publications" class="container">
-  <div class="section_title">Publications</div>
+<section id="publications">
+  <div class="section-title">Publications</div>
 
   <div class="subtitle">Recent Papers</div>
-  <ol class="mt-3 me-2">
+  <ol class="paper-list">
     {publications.map((pub) => (
       <li>
         {pub.authors},
@@ -21,21 +21,62 @@ import publications from '../content/publications.json';
   <a href="https://scholar.google.com/citations?user=pgHBLQcAAAAJ"></a>
 
   <div class="subtitle">Google Scholar</div>
-  <div class="row justify-content-center mt-3">
-    <div class="col-11 col-sm-8">
-      <div class="card">
-        <h5 class="card-header bgcolor2">
-          <img src="/img/Google_Scholar_logo.png" alt="" height="30px" />
-          <span class="ms-2"><a href="https://scholar.google.com/citations?user=pgHBLQcAAAAJ" class="stretched-link">Google Scholar</a></span>
-        </h5>
-        <div class="card-body">
-          <h5 class="card-title">Hideki AOYAMA (青山 秀紀)</h5>
-          <p class="card-text">
-            Panasonic / Real-AI Team<br />Cited by: 4,441<br />
-            <small>Machine Learning / Pattern Recognition / Visible Light Communication / Computer Vision / Ensemble Learning / Reinforcement Learning</small>
-          </p>
-        </div>
-      </div>
+  <div class="scholar-card">
+    <div class="scholar-header">
+      <img src="/img/Google_Scholar_logo.png" alt="" height="30" />
+      <a href="https://scholar.google.com/citations?user=pgHBLQcAAAAJ">Google Scholar</a>
+    </div>
+    <div class="scholar-body">
+      <h3>Hideki AOYAMA (青山 秀紀)</h3>
+      <p>
+        Panasonic / Real-AI Team<br />Cited by: 4,441<br />
+        <small>Machine Learning / Pattern Recognition / Visible Light Communication / Computer Vision / Ensemble Learning / Reinforcement Learning</small>
+      </p>
     </div>
   </div>
 </section>
+
+<style>
+  .paper-list {
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+  }
+
+  .paper-list li {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 0.6rem;
+  }
+
+  .scholar-card {
+    max-width: 600px;
+    margin: 1rem auto 0;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .scholar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background-color: #e8f0ff;
+    font-weight: bold;
+  }
+
+  .scholar-body {
+    padding: 1rem;
+  }
+
+  .scholar-body h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .scholar-body p {
+    margin: 0;
+    font-weight: 400;
+  }
+</style>

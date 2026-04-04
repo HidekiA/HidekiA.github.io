@@ -1,15 +1,56 @@
-<section id="top" class="container">
-  <div class="row justify-content-center align-items-center">
-    <div class="col col-sm-auto col-md text-center fw-bold pt-5" id="top_name">
+<section id="top">
+  <div class="hero">
+    <div class="hero-text">
       <div>Hideki AOYAMA, PhD</div>
       <div>青山 秀紀</div>
-      <div>
+      <div class="mail">
         <img src="/img/mail_01.png" height="16" />
         <img src="/img/mail_02.png" height="16" />
       </div>
     </div>
-    <div class="col-10 col-sm-8 col-md col-lg-5">
-      <img src="/img/HidekiA.jpg" alt="" class="img-fluid" />
+    <div class="hero-image">
+      <img src="/img/HidekiA.jpg" alt="Hideki AOYAMA" />
     </div>
   </div>
 </section>
+
+<style>
+  section {
+    padding-top: 60px;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #00008b;
+    padding-top: 1.5rem;
+  }
+
+  .mail {
+    margin-top: 0.5rem;
+  }
+
+  .hero-image {
+    max-width: 400px;
+    flex-shrink: 0;
+  }
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    .hero-image {
+      max-width: 80%;
+    }
+  }
+</style>

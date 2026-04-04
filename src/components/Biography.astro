@@ -1,34 +1,76 @@
-<section id="biography" class="container">
-  <div class="section_title">Biography</div>
+---
+import { getCollection } from 'astro:content';
+
+const allBio = await getCollection('biography');
+const affiliations = allBio
+  .filter(e => e.data.category === 'affiliation')
+  .sort((a, b) => a.data.order - b.data.order);
+const education = allBio
+  .filter(e => e.data.category === 'education')
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<section id="biography">
+  <div class="section-title">Biography</div>
 
   <div class="subtitle">Professional Affiliation</div>
-  <div class="container">
-    <div class="row justify-content-center m-sm-2">
-      <div class="col-sm-3 col-lg-2 py-2 bgcolor2">2022-present</div>
-      <div class="col-sm py-2 ps-4">Panasonic Holdings Corporation</div>
-      <div class="w-100"></div>
-      <div class="col-sm-3 col-lg-2 py-2 bgcolor2">2011-2022</div>
-      <div class="col-sm py-2 ps-4">Panasonic Corporation</div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row justify-content-center m-sm-2">
-      <div class="col-sm-3 col-lg-2 py-2 bgcolor2">2024-present</div>
-      <div class="col-sm py-2 ps-4">Kyoto University<br /><small>Specially Appointed Senior Lecturer (特命講師)</small></div>
-    </div>
+  <div class="entry-list">
+    {affiliations.map((entry) => (
+      <div class="entry">
+        <div class="period">{entry.data.period}</div>
+        <div class="detail">
+          {entry.data.title}
+          {entry.data.subtitle && <><br /><small>{entry.data.subtitle}</small></>}
+        </div>
+      </div>
+    ))}
   </div>
 
   <div class="subtitle">Education</div>
-  <div class="container">
-    <div class="row justify-content-center m-sm-2">
-      <div class="col-sm-3 col-lg-2 py-1 bgcolor2">2008-2011</div>
-      <div class="col-sm py-1 ps-4">PhD Engineering<br /><small>Graduate School of Engineering, <span>Kyoto University,</span> Japan</small></div>
-      <div class="w-100"></div>
-      <div class="col-sm-3 col-lg-2 py-1 bgcolor2">2006-2008</div>
-      <div class="col-sm py-1 ps-4">Master of Engineering<br /><small>Graduate School of Engineering, <span>Kyoto University,</span> Japan</small></div>
-      <div class="w-100"></div>
-      <div class="col-sm-3 col-lg-2 py-1 bgcolor2">2002-2006</div>
-      <div class="col-sm py-1 ps-4">Bachelor of Engineering<br /><small>Faculty of Engineering, <span>Kyoto University,</span> Japan</small></div>
-    </div>
+  <div class="entry-list">
+    {education.map((entry) => (
+      <div class="entry">
+        <div class="period">{entry.data.period}</div>
+        <div class="detail">
+          {entry.data.title}
+          {entry.data.subtitle && <><br /><small>{entry.data.subtitle}</small></>}
+        </div>
+      </div>
+    ))}
   </div>
 </section>
+
+<style>
+  .entry-list {
+    margin-top: 0.5rem;
+  }
+
+  .entry {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .period {
+    flex-shrink: 0;
+    width: 140px;
+    padding: 0.4rem 0.6rem;
+    background-color: #e8f0ff;
+    font-size: 0.95rem;
+  }
+
+  .detail {
+    padding: 0.4rem 0;
+  }
+
+  @media (max-width: 640px) {
+    .entry {
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 0.75rem;
+    }
+    .period {
+      width: auto;
+    }
+  }
+</style>

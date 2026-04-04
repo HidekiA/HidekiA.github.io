@@ -1,29 +1,123 @@
-<nav id="navbar-main" class="navbar navbar-expand-sm navbar-light bg-white fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#top">
-      <img src="/img/icon.png" alt="" width="36" height="36" class="mb-2" />
-      <span class="d-sm-none ms-2">Hideki AOYAMA</span>
-    </a>
+---
+const navItems = [
+  { label: 'Hideki AOYAMA', href: '#top' },
+  { label: 'Works', href: '#works' },
+  { label: 'Softwares', href: '#softwares' },
+  { label: 'Licenses', href: '#licenses' },
+  { label: 'Publications', href: '#publications' },
+];
+---
 
-    <button
-      type="button"
-      class="navbar-toggler"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="ナビゲーションの切替"
-    >
-      <span class="navbar-toggler-icon"></span>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img src="/img/icon.png" alt="" width="36" height="36" />
+    </a>
+    <button class="menu-toggle" aria-label="ナビゲーションの切替" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#top">Hideki AOYAMA</a></li>
-        <li class="nav-item"><a class="nav-link" href="#works">Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="#softwares">Softwares</a></li>
-        <li class="nav-item"><a class="nav-link" href="#lisences">Lisences</a></li>
-        <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-      </ul>
-    </div>
+    <ul class="nav-links">
+      {navItems.map((item) => (
+        <li><a href={item.href}>{item.label}</a></li>
+      ))}
+    </ul>
   </div>
 </nav>
+
+<script is:inline>
+  document.querySelector('.menu-toggle')?.addEventListener('click', function() {
+    const nav = document.querySelector('.nav-links');
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    nav?.classList.toggle('open');
+  });
+</script>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-bottom: 1px solid #b0c4de;
+    z-index: 1000;
+  }
+
+  .nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    gap: 1rem;
+  }
+
+  .brand img {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 8px;
+    cursor: pointer;
+    margin-left: auto;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .menu-toggle .bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #333;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.2rem;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.5rem 0.7rem;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-radius: 0.4em;
+  }
+  .nav-links a:hover {
+    color: #0000cd;
+  }
+
+  @media (max-width: 640px) {
+    .menu-toggle {
+      display: flex;
+    }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      flex-direction: column;
+      border-bottom: 1px solid #b0c4de;
+      padding: 0.5rem 0;
+    }
+    .nav-links.open {
+      display: flex;
+    }
+    .nav-links a {
+      padding: 0.6rem 1.5rem;
+    }
+  }
+</style>

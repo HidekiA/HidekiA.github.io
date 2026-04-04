@@ -1,39 +1,92 @@
-<section id="softwares" class="container">
-  <div class="section_title">Free softwares</div>
+---
+import { getCollection } from 'astro:content';
 
-  <article class="work position-relative">
-    <div class="row justify-content-center">
-      <div class="col-sm-11 col-md">
-        <div class="fs-5">Google Home Talker MQTT</div>
-        <div class="fw-normal m-2">
-          Python code enables Google Home to talk with IFTTT and MQTT triggers.
-          <a href="https://github.com/HidekiA/google-home-talker-mqtt" class="stretched-link">[Github]</a>
-        </div>
-      </div>
-      <div class="col-11 col-sm-10 col-md align-self-center text-center">
-        <img src="https://github.com/HidekiA/google-home-talker-mqtt/blob/main/img/overview.png?raw=true" alt="" class="img-thumbnail" />
-      </div>
-    </div>
-  </article>
+const allSoftware = (await getCollection('softwares')).sort((a, b) => a.data.order - b.data.order);
+---
 
-  <hr />
+<section id="softwares">
+  <div class="section-title">Free softwares</div>
 
-  <article class="work position-relative">
-    <div class="row justify-content-center">
-      <div class="col-sm-11 col-md">
-        <div class="fs-5">BrowserSwitch</div>
-        <div class="fw-normal m-2 position-relative">
-          BrowserSwitch enables you to open the clicked URL in different browsers depending on the domain of the URL.<br />
-          <a href="/software/browser_switch/" class="stretched-link">[English version]</a>
+  {allSoftware.map((sw, i) => (
+    <>
+      <article class="software">
+        <div class="software-content">
+          <div class="info">
+            <h3>{sw.data.title}</h3>
+            <p>
+              {sw.data.description}
+              {sw.data.link && (
+                <a href={sw.data.link}>[{sw.data.linkLabel}]</a>
+              )}
+            </p>
+            {sw.data.descriptionJa && (
+              <p>{sw.data.descriptionJa}</p>
+            )}
+            {sw.data.links?.map((link) => (
+              <p><a href={link.url}>[{link.label}]</a></p>
+            ))}
+          </div>
+          <div class="image">
+            <img src={sw.data.image} alt={sw.data.title} />
+          </div>
         </div>
-        <div class="fw-normal m-2 position-relative">
-          メールやエクセルファイル等に記載されたURLをクリックした際に、そのURLに応じて異なるブラウザで開くためのソフトウェアです。<br />
-          <a href="/software/browser_switch/index_ja.html" class="stretched-link">[日本語版]</a>
-        </div>
-      </div>
-      <div class="col-5 col-sm-4 col-md-3 col-lg-2 align-self-center text-center">
-        <img src="/software/browser_switch/BrowserSwitch.png" alt="" class="img-thumbnail" />
-      </div>
-    </div>
-  </article>
+      </article>
+      {i < allSoftware.length - 1 && <hr />}
+    </>
+  ))}
 </section>
+
+<style>
+  .software {
+    margin: 1.5rem 0;
+  }
+
+  .software-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .info {
+    flex: 1;
+  }
+
+  .info h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .info p {
+    font-weight: 400;
+    margin: 0.4rem 0;
+  }
+
+  .image {
+    flex-shrink: 0;
+    max-width: 300px;
+  }
+
+  .image img {
+    width: 100%;
+    display: block;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 4px;
+    background: white;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #dee2e6;
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 640px) {
+    .software-content {
+      flex-direction: column;
+    }
+    .image {
+      max-width: 80%;
+    }
+  }
+</style>
