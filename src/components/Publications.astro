@@ -1,0 +1,41 @@
+---
+import publications from '../content/publications.json';
+---
+
+<section id="publications" class="container">
+  <div class="section_title">Publications</div>
+
+  <div class="subtitle">Recent Papers</div>
+  <ol class="mt-3 me-2">
+    {publications.map((pub) => (
+      <li>
+        {pub.authors},
+        &ldquo;{pub.title},&rdquo;
+        {pub.venue}
+        {pub.links.map((link) => (
+          <> [<a href={link.url}>{link.label}</a>]</>
+        ))}
+      </li>
+    ))}
+  </ol>
+  <a href="https://scholar.google.com/citations?user=pgHBLQcAAAAJ"></a>
+
+  <div class="subtitle">Google Scholar</div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-11 col-sm-8">
+      <div class="card">
+        <h5 class="card-header bgcolor2">
+          <img src="/img/Google_Scholar_logo.png" alt="" height="30px" />
+          <span class="ms-2"><a href="https://scholar.google.com/citations?user=pgHBLQcAAAAJ" class="stretched-link">Google Scholar</a></span>
+        </h5>
+        <div class="card-body">
+          <h5 class="card-title">Hideki AOYAMA (青山 秀紀)</h5>
+          <p class="card-text">
+            Panasonic / Real-AI Team<br />Cited by: 4,441<br />
+            <small>Machine Learning / Pattern Recognition / Visible Light Communication / Computer Vision / Ensemble Learning / Reinforcement Learning</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

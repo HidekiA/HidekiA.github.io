@@ -1,0 +1,326 @@
+[
+  {
+    "authors": "Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano",
+    "title": "Delivery Robot Routing Problems Challenge",
+    "venue": "The 25th International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS2026), Paphos, Cyprus, 25-29 May 2026.",
+    "links": [{ "label": "HP", "url": "https://www.drp-challenge.com" }]
+  },
+  {
+    "authors": "Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano",
+    "title": "Drone Routing Problems Challenge",
+    "venue": "The 25th International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS2026), Paphos, Cyprus, 25-29 May 2026.",
+    "links": [{ "label": "Accepted" }]
+  },
+  {
+    "authors": "Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano",
+    "title": "2nd Drone Routing Problems Challenge",
+    "venue": "The 24th International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS2025), Detroit, USA, 20 May 2025.",
+    "links": [{ "label": "HP", "url": "https://sites.google.com/view/drp-challenge2025" }]
+  },
+  {
+    "authors": "Atsuyoshi Kita, Hideki Aoyama and Tadahiro Taniguchi",
+    "title": "SPPP : Stochastic penalty path planning for MAPF under conditions of uncertain travel time",
+    "venue": "The 25th International Conference on Principles and Practice of Multi-Agent Systems (PRIMA2024), pp. 87-93, Kyoto, 20 Nov. 2024.",
+    "links": [{ "label": "DOI", "url": "https://link.springer.com/chapter/10.1007/978-3-031-77367-9_8" }]
+  },
+  {
+    "authors": "Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano",
+    "title": "Drone Routing Problems Challenge",
+    "venue": "The 23rd International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS2024), Auckland, New Zealand, 9 May 2024.",
+    "links": [{ "label": "HP", "url": "https://sites.google.com/view/drp-challenge2024" }]
+  },
+  {
+    "authors": "Shiyao Ding, Hideki Aoyama, and Donghui Lin",
+    "title": "MARL4DRP: Benchmarking Cooperative Multi-Agent Reinforcement Learning Algorithms for Drone Routing Problems",
+    "venue": "20th Pacific Rim International Conference on Artificial Intelligence (PRICAI2023), pp. 459-465, Jakarta, Indonesia, 18 Nov. 2023.",
+    "links": [{ "label": "DOI", "url": "https://link.springer.com/chapter/10.1007/978-981-99-7025-4_40" }]
+  },
+  {
+    "authors": "Hideki Aoyama, Atuyoshi Kita, Shiyao Ding, and Donghui Lin",
+    "title": "Drone Routing Problem: Multi-agent Path Finding Problem for Safe and Efficient Last-mile Delivery",
+    "venue": "Last-Mile Robotics Workshop on International Conference on Intelligent Robots and Systems (IROS2023), Detroit, Michigan, USA, 1 Oct. 2023.",
+    "links": []
+  },
+  {
+    "authors": "北 篤佳, 青山 秀紀, 谷口 忠大",
+    "title": "確率的に変動する所要時間下のマルチエージェント経路探索におけるパラメータ推定について",
+    "venue": "第37回 人工知能学会 全国大会 (JSAI2023), 2F4-GS-5-04, 熊本, 7 Jun. 2023.",
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.11517/pjsai.JSAI2023.0_2F4GS504" }]
+  },
+  {
+    "authors": "Shiyao Ding, Hideki Aoyama, and Donghui Lin",
+    "title": "Combining Multiagent Reinforcement Learning and Search Method for Drone Delivery on a Non-Grid Graph",
+    "venue": "20th International Conference on Practical Applications of Agents and Multi-Agent Systems (PAAMS), pp. 112-126, L'Aquila, Italy, 13 Jul. 2022.",
+    "links": [{ "label": "DOI", "url": "https://link.springer.com/chapter/10.1007/978-3-031-18192-4_10" }]
+  },
+  {
+    "authors": "青山 秀紀, 丁 世堯, 林 冬惠",
+    "title": "ドローン配送計画最適化問題のための最短経路情報を利用したマルチエージェント強化学習",
+    "venue": "第36回 人工知能学会 全国大会 (JSAI2022), 3O3-GS-5, 京都, 16 Jun. 2022.",
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.11517/pjsai.JSAI2022.0_3O3GS505" }]
+  },
+  {
+    "authors": "Shiyao Ding, Hideki Aoyama, and Donghui Lin",
+    "title": "Non-Grid Multiagent Pathfinding via Combining Learning-based Method and Search-based Method",
+    "venue": "The 36th Annual Conference of the Japanese Society for Artificial Intelligence (JSAI2022), 1S1-IS-3-02, Kyoto, Japan, 14 Jun. 2022.",
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.11517/pjsai.JSAI2022.0_1S1IS302" }]
+  },
+  {
+    "authors": "Shiyao Ding, Hideki Aoyama, and Donghui Lin",
+    "title": "Combining Multiagent Reinforcement Learning and Discrete Event Modeling for Pathfinding on a Non-Grid Graph",
+    "venue": "IEICE Technical Report, vol. 121, no. 157, SC2021-13, pp.13-17, Online, 27 Aug. 2021.",
+    "links": [{ "label": "IEICE", "url": "https://www.ieice.org/ken/paper/20210827ZCFn/" }]
+  },
+  {
+    "authors": "Hideki Aoyama, and Mitsuaki Oshima",
+    "title": "Mirror Pulse Modulation for Image Sensor-based Optical Wireless Communication",
+    "venue": "2021 IEEE International Conference on Communications (ICC), Online (Montreal, Canada), 17 Jun. 2021.",
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.1109/ICC42927.2021.9500299" }]
+  },
+  {
+    "authors": "青山 秀紀, 大嶋 光昭",
+    "title": "\"LinkRay\" スマートフォンのカメラを用いた可視光通信",
+    "venue": "光技術コンタクト, vol. 57, no. 5, pp. 32-39, May 2019.",
+    "links": [{ "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/40021895405/" }]
+  },
+  {
+    "authors": "青山 秀紀, 大嶋 光昭",
+    "title": "カメラ受信型可視光通信を利用した不可視マーカによる拡張現実",
+    "venue": "第21回 画像の認識・理解シンポジウム (MIRU), PS2-72, 北海道, 7 Aug. 2018.",
+    "links": []
+  },
+  {
+    "authors": "青山 秀紀, 大嶋 光昭",
+    "title": "LED 照明と通信するためのカメラ受信型高速可視光通信技術",
+    "venue": "第65回光設計研究グループ研究会, pp. 19-24, 13 Jul. 2018.",
+    "links": []
+  },
+  {
+    "authors": "大嶋 光昭, 青山 秀紀, 中西 幸司, 前田 敏行",
+    "title": "IoT応用技術としてのカメラ受信型可視光通信技術の開発",
+    "venue": "Optronics : 光技術コーディネートジャーナル, vol. 36, no. 8, pp. 64-71, Aug. 2017.",
+    "links": [{ "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/40021310293/" }]
+  },
+  {
+    "authors": "大嶋 光昭, 青山 秀紀, 中西 幸司, 前田 敏行",
+    "title": "イメージセンサ受信型可視光通信技術の開発",
+    "venue": "Panasonic Technical Journal, vol. 61, no. 2, pp. 118-123, 16 Nov. 2015.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/40020649569/" },
+      { "label": "PDF", "url": "https://www.panasonic.com/jp/corporate/technology-design/ptj/pdf/v6102/p0110.pdf" }
+    ]
+  },
+  {
+    "authors": "Hideki Aoyama, and Mitsuaki Oshima",
+    "title": "Line scan sampling for visible light communication: Theory and practice",
+    "venue": "2015 IEEE International Conference on Communications (ICC), pp. 5060-5065, London, UK, 9 Jun. 2015.",
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.1109/ICC.2015.7249126" }]
+  },
+  {
+    "authors": "Hideki Aoyama, and Mitsuaki Oshima",
+    "title": "Visible light communication using a conventional image sensor",
+    "venue": "12th Annual IEEE Consumer Communications and Networking Conference (CCNC), pp. 103-108, Las Vegas, USA, 10 Jan. 2015.",
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.1109/CCNC.2015.7157954" }]
+  },
+  {
+    "authors": "青山 秀紀, 山岡 勝, 坂田 毅, 大嶋光昭",
+    "title": "スマートフォン・クラウド連携スマート家電による新しいユーザ価値提供",
+    "venue": "信学技報, vol. 113, no. 248, CNR2013-20, pp. 49-52, 大阪, 18 Oct. 2013.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110009784573" },
+      { "label": "IEICE", "url": "https://www.ieice.org/ken/paper/20131018DB6t/" }
+    ]
+  },
+  {
+    "authors": "青山 秀紀, 近藤 一晃, 中村 裕一, 秋田 純一, 戸田 真志, 櫻沢 繁",
+    "title": "筋電位計測と画像計測を利用した把持行動の予測",
+    "venue": "電子情報通信学会論文誌, vol. J95-D, no. 3, pp. 527-538, 1 Mar. 2012.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110009418761" },
+      { "label": "IEICE", "url": "https://search.ieice.org/bin/summary.php?id=j95-d_3_527" }
+    ]
+  },
+  {
+    "authors": "青山 秀紀, 近藤 一晃, 中村 裕一",
+    "title": "協調フィルタリングを利用した作業支援システムの行動選択",
+    "venue": "信学技報, vol. 111, no. 210, SIS2011-25, pp. 21-26, 秋田, Sept. 2011.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110008899636" },
+      { "label": "IEICE", "url": "https://www.ieice.org/ken/paper/20110921v08X/" }
+    ]
+  },
+  {
+    "authors": "谷口 充展, 青山 秀紀, 近藤 一晃, 中村 裕一, 櫻沢 繁, 戸田 真志, 秋田 純一",
+    "title": "筋電インタフェース：EMGUIの設計支援手法",
+    "venue": "信学会 MVE研究会 (席上配布), 長崎, Mar. 2011.",
+    "links": [{ "label": "IEICE", "url": "https://www.ieice.org/ken/paper/20110308j0FY/" }]
+  },
+  {
+    "authors": "長光 左千夫, 青山 秀紀, 中村 裕一, 美濃 導彦",
+    "title": "頭部・視線の動きに基づくアドバイスへのユーザの依存度推定手法",
+    "venue": "電子情報通信学会論文誌, vol. J94-D, no. 1, pp. 251-259, Jan. 2011.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110008006566" },
+      { "label": "IEICE", "url": "https://search.ieice.org/bin/summary.php?id=j94-d_1_251" }
+    ]
+  },
+  {
+    "authors": "Hideki Aoyama, Kazuaki Kondo, and Yuichi Nakamura",
+    "title": "Interaction Carving: Dynamic Interaction Configuration for User Oriented Support",
+    "venue": "11th Association of Pacific Rim Universities Doctoral Students Conference (APRU DSC), Depok, Indonesia, Jul. 2010.",
+    "links": []
+  },
+  {
+    "authors": "青山 秀紀, 谷口 充展, 近藤 一晃, 中村 裕一, 秋田 純一, 戸田 真志, 櫻沢 繁",
+    "title": "画像センシングと筋電インタフェースによるウェアラブル情報提供システム",
+    "venue": "信学技報, vol. 110, no. 27, PRMU2010-23, pp. 121-126, 愛知, May 2010.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110008002927" },
+      { "label": "IEICE", "url": "https://www.ieice.org/ken/paper/20100514IaxJ/" }
+    ]
+  },
+  {
+    "authors": "Zhiwen Yu, Zhiyong Yu, Hideki Aoyama, Motoyuki Ozeki, and Yuich Nakamura",
+    "title": "Capture, Recognition, and Visualization of Human Semantic Interactions in Meetings",
+    "venue": "Proceedings of the 8th IEEE International Conference on Pervasive Computing and Communications (PerCom), pp. 107-115, Mannheim, Germany, 31 Mar. 2010.",
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.1109/PERCOM.2010.5466987" }]
+  },
+  {
+    "authors": "長光 左千夫, 青山 秀紀, 中村 裕一, 美濃 導彦",
+    "title": "頭部・視線の動きに基づくアドバイスへのユーザの依存度推定手法",
+    "venue": "信学技報, vol. 109, no. 471, PRMU2009-243, pp. 61-66, 鹿児島, Mar. 2010.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110008002822" },
+      { "label": "IEICE", "url": "https://www.ieice.org/ken/paper/20100315aaWg/" }
+    ]
+  },
+  {
+    "authors": "谷口 充展, 青山 秀紀, 近藤 一晃, 中村 裕一, 櫻沢 繁, 戸田 真志, 秋田 純一",
+    "title": "筋電インタフェースEMGUIのための動作選択手法",
+    "venue": "信学技報, vol. 109, no. 281, MVE2009-61, pp. 19-20, Nov. 2009.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110007521573" },
+      { "label": "IEICE", "url": "https://www.ieice.org/ken/paper/20091112zaS0/" }
+    ]
+  },
+  {
+    "authors": "Hideki Aoyama, Motoyuki Ozeki, and Yuichi Nakamura",
+    "title": "Smart Cooking Support System based on Interaction Reproducing Model",
+    "venue": "Proceedings of ACM Multimedia 2009 Workshop on Multimedia for Cooking and Eating Activities (CEA2009), pp. 39-45, Beijing, China, 23 Oct. 2009.",
+    "links": [{ "label": "DOI", "url": "http://dx.doi.org/10.1145/1630995.1631003" }]
+  },
+  {
+    "authors": "青山 秀紀, 尾関 基行, 中村 裕一",
+    "title": "ユーザの状態に適応した支援を行うためのインタラクションモデル",
+    "venue": "電子情報通信学会論文誌, vol. J92-D, no. 8, pp. 1317-1328, Aug. 2009.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110007361089" },
+      { "label": "IEICE", "url": "https://search.ieice.org/bin/summary.php?id=j92-d_8_1317" }
+    ]
+  },
+  {
+    "authors": "青山 秀紀, 伊藤 大司, 中村 裕一, 櫻沢 繁, 戸田 真志, 秋田 純一",
+    "title": "視覚情報を援用した筋電ユーザインタフェース",
+    "venue": "第12回 画像の認識・理解シンポジウム (MIRU), pp. 1797-1802, 島根, 22 Jul. 2009.",
+    "links": [{ "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/10027147318" }]
+  },
+  {
+    "authors": "Hideki Aoyama, Motoyuki Ozeki, and Yuichi Nakamura",
+    "title": "Interaction Reproducing Model for Adapating Intelligent Tutoring Systems to Internal State",
+    "venue": "International Conference on Multimedia and Information and Communication Technologies in Education, pp. 766-770, Lisbon, Portugal, 23 Apr. 2009.",
+    "links": []
+  },
+  {
+    "authors": "井手 一郎, 北村 圭吾, 山崎 俊彦, 相澤 清晴, 青山 秀紀, 尾関 基行, 中村 裕一, 佐野 睦夫, 宮脇 健三郎",
+    "title": "料理メディア ―台所におけるディジタルコンテンツの処理と利用―",
+    "venue": "映像情報メディア学会誌, vol. 63, no. 2, pp. 156-160, 1 Feb. 2009.",
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.3169/itej.63.156" }]
+  },
+  {
+    "authors": "Hideki Aoyama, Motoyuki Ozeki, and Yuichi Nakamura",
+    "title": "Interaction Reproducing Model: A Model for Giving Appropriate Supports to User State",
+    "venue": "Advances in Multimedia Information Processing: 9th Pacific Rim Conference on Multimedia (PCM), pp. 426-435, Tainan, Taiwan, 11 Dec. 2008.",
+    "links": [{ "label": "DOI", "url": "http://dx.doi.org/10.1007/978-3-540-89796-5_44" }]
+  },
+  {
+    "authors": "青山 秀紀, 尾関 基行, 中村 裕一",
+    "title": "インタラクション再生モデルによるさりげない学習支援",
+    "venue": "信学技報, PRMU2008-111, vol. 108, no. 327, pp. 1-8, 大阪, 27 Nov. 2008.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110007098161" },
+      { "label": "IEICE", "url": "https://www.ieice.org/ken/paper/200811278agz/" }
+    ]
+  },
+  {
+    "authors": "Zhiwen Yu, Zhiyong Yu, Hideki Aoyama, Motoyuki Ozeki, and Yuichi Nakamura",
+    "title": "Social Interaction Detection and Browsing in Meetings",
+    "venue": "Proceedings of the 10th Ubicomp 2008 Adjunct Programs, pp. 40-41, Seoul, South Korea, 21-24 Sept. 2008.",
+    "links": [{ "label": "PDF", "url": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.211.7816&rep=rep1&type=pdf#page=48" }]
+  },
+  {
+    "authors": "青山 秀紀, 尾関 基行, 中村 裕一",
+    "title": "ユーザの状態に適応した支援を行うためのインタラクションモデル",
+    "venue": "第11回 画像の認識・理解シンポジウム (MIRU), pp. 121-128, 長野, 30 Jul. 2008.",
+    "links": [{ "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/10024878318" }]
+  },
+  {
+    "authors": "青山 秀紀, 尾関 基行, 中村 裕一",
+    "title": "ユーザの内部状態に応じた教示コンテンツ提示 --調理支援のためのユーザ教示モデル--",
+    "venue": "第4回デジタルコンテンツシンポジウム (DCS), 8-3, 千葉, 13 Jun. 2008.",
+    "links": []
+  },
+  {
+    "authors": "Zhiwen Yu, Hideki Aoyama, Motoyuki Ozeki, and Yuichi Nakamura",
+    "title": "Collaborative Capturing and Detection of Human Interactions in Meetings",
+    "venue": "Adjunct Proceedings of the 6th International Conference on Pervasive Computing (PerCom), pp. 65-69, Sydney, Australia, 19-22 May 2008.",
+    "links": [{ "label": "DOI", "url": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.214.2390" }]
+  },
+  {
+    "authors": "Motoyuki Ozeki, Yasushi Miyata, Hideki Aoyama, and Yuichi Nakamura",
+    "title": "Human Support Improvements by Natural Man-Machine Collaboration -- Object recognition through interactions with an artificial agent --",
+    "venue": "Proceedings of 2nd International Workshop on Human-Centered Multimedia (HCM), pp. 95-101, Bavaria, Germany, 28 Sept. 2007.",
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.1145/1290128.1290143" }]
+  },
+  {
+    "authors": "尾関 基行, 宮田 康志, 青山 秀紀, 中村 裕一",
+    "title": "作業支援システムのための人工エージェントとのインタラクションを援用した物体認識",
+    "venue": "第10回 画像の認識・理解シンポジウム (MIRU), pp. 81-86, 広島, 30 Jul. 2007.",
+    "links": []
+  },
+  {
+    "authors": "青山 秀紀, 尾関 基行, 中村 裕一",
+    "title": "さりげない作業支援のためのユーザ状態のアクティブな認識 --エージェントを介した作業支援のためのインタラクションモデル--",
+    "venue": "信学技報, PRMU2007-31, pp. 25-30, 札幌, 28 Jun. 2007.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110006343874" },
+      { "label": "IEICE", "url": "https://www.ieice.org/ken/paper/20070628mAVf/" }
+    ]
+  },
+  {
+    "authors": "宮田 康志, 尾関 基行, 青山 秀紀, 中村 裕一",
+    "title": "人工エージェントとのインタラクションを援用した作業支援のための物体認識システム",
+    "venue": "電子情報通信学会2007年総合大会 講演論文集, p. 286, 愛知, 22 Mar. 2007.",
+    "links": []
+  },
+  {
+    "authors": "青山 秀紀, 宮田 康志, 尾関 基行, 中村 裕一",
+    "title": "作業支援システムにおけるインタラクションのための人工エージェントの動作設計",
+    "venue": "電子情報通信学会2007年総合大会 講演論文集, p. 285, 愛知, 22 Mar. 2007.",
+    "links": []
+  },
+  {
+    "authors": "宮田 康志, 青山 秀紀, 尾関 基行, 中村 裕一",
+    "title": "人工エージェントとのインタラクションを援用した物体認識システム",
+    "venue": "信学技報, MVE2006-74, pp. 19-24, 福岡, 25 Jan. 2007.",
+    "links": [
+      { "label": "CiNii", "url": "https://ci.nii.ac.jp/naid/110006205193" },
+      { "label": "IEICE", "url": "https://www.ieice.org/ken/paper/20070125hARR/" }
+    ]
+  },
+  {
+    "authors": "尾関 基行, 青山 秀紀, 中村 裕一",
+    "title": "人工エージェントのノンバーバル表現とメタ表示の関係",
+    "venue": "第2回デジタルコンテンツシンポジウム (DCS) 講演予稿集, 5-7, 東京, 7 Jun. 2006.",
+    "links": []
+  }
+]
