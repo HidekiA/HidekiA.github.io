@@ -2,12 +2,8 @@
 import { getCollection } from 'astro:content';
 
 const allLicenses = await getCollection('licenses');
-const licenseEntries = allLicenses
-  .filter(e => e.data.section === 'licenses')
-  .sort((a, b) => a.data.order - b.data.order);
-const certEntries = allLicenses
-  .filter(e => e.data.section === 'certificates')
-  .sort((a, b) => a.data.order - b.data.order);
+const licenseEntries = allLicenses.filter(e => e.data.section === 'licenses');
+const certEntries = allLicenses.filter(e => e.data.section === 'certificates');
 ---
 
 <section id="licenses">

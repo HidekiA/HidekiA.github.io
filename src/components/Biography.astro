@@ -2,12 +2,8 @@
 import { getCollection } from 'astro:content';
 
 const allBio = await getCollection('biography');
-const affiliations = allBio
-  .filter(e => e.data.category === 'affiliation')
-  .sort((a, b) => a.data.order - b.data.order);
-const education = allBio
-  .filter(e => e.data.category === 'education')
-  .sort((a, b) => a.data.order - b.data.order);
+const affiliations = allBio.filter(e => e.data.category === 'affiliation');
+const education = allBio.filter(e => e.data.category === 'education');
 ---
 
 <section id="biography">

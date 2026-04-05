@@ -1,42 +1,34 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 const allWorks = (await getCollection('works')).sort((a, b) => a.data.order - b.data.order);
+
+const rendered = await Promise.all(
+  allWorks.map(async (work) => {
+    const { Content } = await render(work);
+    return { work, Content };
+  })
+);
 ---
 
 <section id="works">
   <div class="section-title">Works</div>
 
-  {allWorks.map((work, i) => (
+  {rendered.map(({ work, Content }, i) => (
     <>
       <article class="work">
-        {/* Logo */}
         {work.data.logo && (
           <div class="logo">
             <img src={work.data.logo.src} style={`height: ${work.data.logo.height}`} />
           </div>
         )}
 
-        {/* Title (for items without a logo or standard layout) */}
         {!work.data.logo && <h3 class="work-title">{work.data.title}</h3>}
 
-        {/* Role description */}
-        {work.data.role && (
-          <div class="role">
-            {work.data.role.split('\n').map((line) => <>{line}<br /></>)}
-          </div>
-        )}
+        <div class="work-body">
+          <Content />
+        </div>
 
-        {/* Standard link */}
-        {work.data.standardLink && work.data.standardTitle && (
-          <div class="standard-link">
-            <a href={work.data.standardLink}>
-              {work.data.standardTitle.split('\n').map((line) => <>{line}<br /></>)}
-            </a>
-          </div>
-        )}
-
-        {/* Grid of images + optional single image */}
         <div class="media-grid">
           {work.data.images?.map((img) => (
             <div class="media-item">
@@ -65,7 +57,6 @@ const allWorks = (await getCollection('works')).sort((a, b) => a.data.order - b.
           ))}
         </div>
 
-        {/* Store links */}
         {work.data.storeLinks && work.data.storeLinks.length > 0 && (
           <div class="store-links">
             {work.data.storeLinks.map((store) => (
@@ -76,7 +67,7 @@ const allWorks = (await getCollection('works')).sort((a, b) => a.data.order - b.
           </div>
         )}
       </article>
-      {i < allWorks.length - 1 && <hr />}
+      {i < rendered.length - 1 && <hr />}
     </>
   ))}
 </section>
@@ -95,13 +86,12 @@ const allWorks = (await getCollection('works')).sort((a, b) => a.data.order - b.
     margin-bottom: 0.5rem;
   }
 
-  .role {
+  .work-body {
+    margin: 0.5rem 0;
     font-size: 1.1rem;
-    margin: 0.75rem 0;
   }
-
-  .standard-link {
-    margin: 0.75rem 0;
+  .work-body :global(p) {
+    margin: 0.3rem 0;
   }
 
   .media-grid {
