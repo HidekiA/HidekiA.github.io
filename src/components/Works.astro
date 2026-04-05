@@ -25,36 +25,44 @@ const rendered = await Promise.all(
 
         {!work.data.logo && <h3 class="work-title">{work.data.title}</h3>}
 
-        <div class="work-body">
-          <Content />
-        </div>
+        <div class={`work-content ${work.data.layout === 'side-by-side' ? 'side-by-side' : ''}`}>
+          <div class="work-body">
+            <Content />
+          </div>
 
-        <div class="media-grid">
-          {work.data.images?.map((img) => (
-            <div class="media-item">
-              {img.link ? (
-                <a href={img.link}>
+          <div class="media-grid">
+            {work.data.images?.map((img) => (
+              <div class="media-item">
+                {img.link ? (
+                  <a href={img.link}>
+                    <img src={img.src} alt={img.alt || ''} class="thumbnail" />
+                  </a>
+                ) : (
                   <img src={img.src} alt={img.alt || ''} class="thumbnail" />
-                </a>
-              ) : (
-                <img src={img.src} alt={img.alt || ''} class="thumbnail" />
-              )}
-            </div>
-          ))}
-
-          {work.data.image && (
-            <div class="media-item">
-              <img src={work.data.image.src} alt={work.data.image.alt} class="thumbnail" />
-            </div>
-          )}
-
-          {work.data.videos?.map((url) => (
-            <div class="media-item">
-              <div class="video-wrapper">
-                <iframe src={url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                )}
               </div>
-            </div>
-          ))}
+            ))}
+
+            {work.data.image && (
+              <div class="media-item">
+                {work.data.link ? (
+                  <a href={work.data.link}>
+                    <img src={work.data.image.src} alt={work.data.image.alt} class="thumbnail" />
+                  </a>
+                ) : (
+                  <img src={work.data.image.src} alt={work.data.image.alt} class="thumbnail" />
+                )}
+              </div>
+            )}
+
+            {work.data.videos?.map((url) => (
+              <div class="media-item">
+                <div class="video-wrapper">
+                  <iframe src={url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {work.data.storeLinks && work.data.storeLinks.length > 0 && (
@@ -84,6 +92,28 @@ const rendered = await Promise.all(
 
   .logo {
     margin-bottom: 0.5rem;
+  }
+
+  .work-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 640px) {
+    .work-content.side-by-side {
+      flex-direction: row;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .work-content.side-by-side .work-body {
+      flex: 1;
+    }
+
+    .work-content.side-by-side .media-grid {
+      flex: 1;
+      margin-top: 0;
+    }
   }
 
   .work-body {
