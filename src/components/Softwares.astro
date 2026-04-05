@@ -1,39 +1,42 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
-const allSoftware = await getCollection('software');
+const allSoftware = (await getCollection('software')).sort((a, b) => a.data.order - b.data.order);
+
+const rendered = await Promise.all(
+  allSoftware.map(async (sw) => {
+    const { Content } = await render(sw);
+    return { sw, Content };
+  })
+);
 ---
 
 <section id="softwares">
   <div class="section-title">Free softwares</div>
 
-  {allSoftware.map((sw, i) => (
-    <>
-      <article class="software">
-        <div class="software-content">
-          <div class="info">
-            <h3>{sw.data.title}</h3>
-            <p>
-              {sw.data.description}
-              {sw.data.link && (
-                <a href={sw.data.link}>[{sw.data.linkLabel}]</a>
-              )}
-            </p>
-            {sw.data.descriptionJa && (
-              <p>{sw.data.descriptionJa}</p>
-            )}
-            {sw.data.links?.map((link) => (
-              <p><a href={link.url}>[{link.label}]</a></p>
-            ))}
+  {rendered.map(({ sw, Content }, i) => {
+    const imgWide = sw.data.imageWidthSideBySide ?? 30;
+    const imgNarrow = sw.data.imageWidthStacked ?? 50;
+    return (
+      <>
+        <article
+          class="software"
+          style={`--img-wide: ${imgWide}%; --img-narrow: ${imgNarrow}%;`}
+        >
+          <h3>{sw.data.title}</h3>
+          <div class="software-content">
+            <div class="info">
+              <Content />
+            </div>
+            <div class="image">
+              <img src={sw.data.image} alt={sw.data.title} />
+            </div>
           </div>
-          <div class="image">
-            <img src={sw.data.image} alt={sw.data.title} />
-          </div>
-        </div>
-      </article>
-      {i < allSoftware.length - 1 && <hr />}
-    </>
-  ))}
+        </article>
+        {i < rendered.length - 1 && <hr />}
+      </>
+    );
+  })}
 </section>
 
 <style>
@@ -41,29 +44,29 @@ const allSoftware = await getCollection('software');
     margin: 1.5rem 0;
   }
 
-  .software-content {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
-
-  .info {
-    flex: 1;
-  }
-
-  .info h3 {
+  .software h3 {
     font-size: 1.2rem;
     margin: 0 0 0.5rem;
   }
 
-  .info p {
+  .software-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .info {
+    width: 100%;
     font-weight: 400;
+  }
+
+  .info :global(p) {
     margin: 0.4rem 0;
   }
 
   .image {
-    flex-shrink: 0;
-    max-width: 300px;
+    width: var(--img-narrow);
+    margin: 0 auto;
   }
 
   .image img {
@@ -75,18 +78,27 @@ const allSoftware = await getCollection('software');
     background: white;
   }
 
+  @media (min-width: 640px) {
+    .software-content {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .info {
+      width: calc(100% - var(--img-wide));
+      flex-shrink: 0;
+    }
+
+    .image {
+      width: var(--img-wide);
+      flex-shrink: 0;
+      margin: 0;
+    }
+  }
+
   hr {
     border: none;
     border-top: 1px solid #dee2e6;
     margin: 1rem 0;
-  }
-
-  @media (max-width: 640px) {
-    .software-content {
-      flex-direction: column;
-    }
-    .image {
-      max-width: 80%;
-    }
   }
 </style>
