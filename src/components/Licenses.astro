@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import T from './T.astro';
 
 const allLicenses = await getCollection('licenses');
 const licenseEntries = allLicenses.filter(e => e.data.section === 'licenses');
@@ -7,36 +8,36 @@ const certEntries = allLicenses.filter(e => e.data.section === 'certificates');
 ---
 
 <section id="licenses">
-  <div class="section-title">Licenses & Certificates</div>
+  <div class="section-title"><T en="Licenses & Certificates" ja="免許・資格" /></div>
 
-  <div class="subtitle">Licenses</div>
+  <div class="subtitle"><T en="Licenses" ja="免許" /></div>
   <div class="license-list">
     {licenseEntries.map((entry) => (
       <div class="category-group">
-        <div class="category-label">{entry.data.category}:</div>
+        <div class="category-label"><T en={entry.data.category.en} ja={entry.data.category.ja} />:</div>
         <div class="items">
           {entry.data.items.map((item, i) => (
-            <>{i > 0 && ' / '}{item.link ? <a href={item.link}>{item.name}</a> : item.name}</>
+            <>{i > 0 && ' / '}{item.link ? <a href={item.link}><T en={item.name.en} ja={item.name.ja} /></a> : <T en={item.name.en} ja={item.name.ja} />}</>
           ))}
         </div>
       </div>
     ))}
   </div>
 
-  <div class="subtitle">Certificates</div>
+  <div class="subtitle"><T en="Certificates" ja="資格" /></div>
   <div class="license-list">
     {certEntries.map((entry) => (
       <div class="category-group">
-        <div class="category-label">{entry.data.category}:</div>
+        <div class="category-label"><T en={entry.data.category.en} ja={entry.data.category.ja} />:</div>
         <div class="items">
           {entry.data.items.map((item, i) => (
-            <>{i > 0 && ' / '}{item.link ? <a href={item.link}>{item.name}</a> : item.name}</>
+            <>{i > 0 && ' / '}{item.link ? <a href={item.link}><T en={item.name.en} ja={item.name.ja} /></a> : <T en={item.name.en} ja={item.name.ja} />}</>
           ))}
           {entry.data.items.some(item => item.badge) && (
             <div class="badges">
               {entry.data.items.filter(item => item.badge).map((item) => (
                 <a href={item.link}>
-                  <img src={item.badge} alt={item.name} width="120" height="120" />
+                  <img src={item.badge} alt={item.name.en} width="120" height="120" />
                 </a>
               ))}
             </div>

@@ -1,11 +1,12 @@
 ---
 import publications from '../content/publications.json';
+import T from './T.astro';
 ---
 
 <section id="publications">
-  <div class="section-title">Publications</div>
+  <div class="section-title"><T en="Publications" ja="論文" /></div>
 
-  <div class="subtitle">Recent Papers</div>
+  <div class="subtitle"><T en="Recent Papers" ja="発表論文" /></div>
   <ol class="paper-list">
     {publications.map((pub) => (
       <li>
@@ -13,7 +14,7 @@ import publications from '../content/publications.json';
         &ldquo;{pub.title},&rdquo;
         {pub.venue}
         {pub.links.map((link) => (
-          <> [<a href={link.url}>{link.label}</a>]</>
+          <> [{('url' in link && link.url) ? <a href={link.url}>{link.label}</a> : link.label}]</>
         ))}
       </li>
     ))}

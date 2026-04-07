@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import T from './T.astro';
 
 const allWorks = (await getCollection('works')).sort((a, b) => a.data.order - b.data.order);
 
@@ -12,7 +13,7 @@ const rendered = await Promise.all(
 ---
 
 <section id="works">
-  <div class="section-title">Works</div>
+  <div class="section-title"><T en="Works" ja="業績" /></div>
 
   {rendered.map(({ work, Content }, i) => (
     <>
@@ -23,9 +24,9 @@ const rendered = await Promise.all(
           </div>
         )}
 
-        {!work.data.logo && <h3 class="work-title">{work.data.title}</h3>}
+        {!work.data.logo && <h3 class="work-title"><T en={work.data.title.en} ja={work.data.title.ja} /></h3>}
 
-        <div class={`work-content ${work.data.layout === 'side-by-side' ? 'side-by-side' : ''}`}>
+        <div class={`work-content ${work.data.contentLayout === 'side-by-side' ? 'side-by-side' : ''}`}>
           <div class="work-body">
             <Content />
           </div>

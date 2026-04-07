@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import T from './T.astro';
 
 const allBio = await getCollection('biography');
 const affiliations = allBio.filter(e => e.data.category === 'affiliation').sort((a, b) => a.data.order - b.data.order);
@@ -7,29 +8,29 @@ const education = allBio.filter(e => e.data.category === 'education').sort((a, b
 ---
 
 <section id="biography">
-  <div class="section-title">Biography</div>
+  <div class="section-title"><T en="Biography" ja="経歴" /></div>
 
-  <div class="subtitle">Professional Affiliation</div>
+  <div class="subtitle"><T en="Professional Affiliation" ja="職歴" /></div>
   <div class="entry-list">
     {affiliations.map((entry) => (
       <div class="entry">
         <div class="period">{entry.data.period}</div>
         <div class="detail">
-          {entry.data.title}
-          {entry.data.subtitle && <><br /><small>{entry.data.subtitle}</small></>}
+          <T en={entry.data.title.en} ja={entry.data.title.ja} />
+          {entry.data.subtitle && <><br /><small><T en={entry.data.subtitle.en} ja={entry.data.subtitle.ja} /></small></>}
         </div>
       </div>
     ))}
   </div>
 
-  <div class="subtitle">Education</div>
+  <div class="subtitle"><T en="Education" ja="学歴" /></div>
   <div class="entry-list">
     {education.map((entry) => (
       <div class="entry">
         <div class="period">{entry.data.period}</div>
         <div class="detail">
-          {entry.data.title}
-          {entry.data.subtitle && <><br /><small>{entry.data.subtitle}</small></>}
+          <T en={entry.data.title.en} ja={entry.data.title.ja} />
+          {entry.data.subtitle && <><br /><small><T en={entry.data.subtitle.en} ja={entry.data.subtitle.ja} /></small></>}
         </div>
       </div>
     ))}

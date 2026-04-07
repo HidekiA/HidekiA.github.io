@@ -1,10 +1,10 @@
 ---
 const navItems = [
-  { label: 'Hideki AOYAMA', href: '#top' },
-  { label: 'Works', href: '#works' },
-  { label: 'Softwares', href: '#softwares' },
-  { label: 'Licenses', href: '#licenses' },
-  { label: 'Publications', href: '#publications' },
+  { en: 'Hideki AOYAMA', ja: '青山 秀紀', href: '#top' },
+  { en: 'Works', ja: '業績', href: '#works' },
+  { en: 'Softwares', ja: 'ソフトウェア', href: '#softwares' },
+  { en: 'Licenses', ja: '資格', href: '#licenses' },
+  { en: 'Publications', ja: '論文', href: '#publications' },
 ];
 ---
 
@@ -13,26 +13,58 @@ const navItems = [
     <a class="brand" href="#top">
       <img src="/img/icon.png" alt="" width="36" height="36" />
     </a>
-    <button class="menu-toggle" aria-label="ナビゲーションの切替" aria-expanded="false">
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </button>
     <ul class="nav-links">
       {navItems.map((item) => (
-        <li><a href={item.href}>{item.label}</a></li>
+        <li>
+          <a href={item.href}>
+            <span data-i18n-en>{item.en}</span>
+            <span data-i18n-ja>{item.ja}</span>
+          </a>
+        </li>
       ))}
     </ul>
+    <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+      <span data-lang="en" class="lang-option">EN</span>
+      <span class="lang-sep">|</span>
+      <span data-lang="ja" class="lang-option">JA</span>
+    </button>
   </div>
 </nav>
 
 <script is:inline>
+  // Mobile menu toggle
   document.querySelector('.menu-toggle')?.addEventListener('click', function() {
     const nav = document.querySelector('.nav-links');
     const expanded = this.getAttribute('aria-expanded') === 'true';
     this.setAttribute('aria-expanded', String(!expanded));
     nav?.classList.toggle('open');
   });
+
+  // Language toggle
+  (function() {
+    var toggle = document.getElementById('lang-toggle');
+    function updateToggleUI(lang) {
+      if (!toggle) return;
+      toggle.querySelector('[data-lang="en"]').classList.toggle('active', lang === 'en');
+      toggle.querySelector('[data-lang="ja"]').classList.toggle('active', lang === 'ja');
+    }
+    // Set initial UI
+    updateToggleUI(document.documentElement.getAttribute('data-lang') || 'en');
+    // Handle click
+    toggle?.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-lang');
+      var next = current === 'ja' ? 'en' : 'ja';
+      document.documentElement.setAttribute('data-lang', next);
+      document.documentElement.lang = next;
+      localStorage.setItem('lang', next);
+      updateToggleUI(next);
+    });
+  })();
 </script>
 
 <style>
@@ -98,9 +130,44 @@ const navItems = [
     color: #0000cd;
   }
 
+  /* Language toggle */
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-left: auto;
+    background: none;
+    border: 1px solid #b0c4de;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #999;
+    flex-shrink: 0;
+  }
+  .lang-toggle:hover {
+    border-color: #5179f1;
+  }
+  .lang-sep {
+    color: #ccc;
+    pointer-events: none;
+  }
+  .lang-option {
+    transition: color 0.15s;
+  }
+  .lang-option.active {
+    color: #5179f1;
+  }
+
   @media (max-width: 640px) {
     .menu-toggle {
       display: flex;
+      margin-left: auto;
+    }
+    .lang-toggle {
+      margin-left: 0;
     }
     .nav-links {
       display: none;

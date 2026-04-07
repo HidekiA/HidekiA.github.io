@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import T from './T.astro';
 
 const allSoftware = (await getCollection('software')).sort((a, b) => a.data.order - b.data.order);
 
@@ -12,7 +13,7 @@ const rendered = await Promise.all(
 ---
 
 <section id="softwares">
-  <div class="section-title">Free softwares</div>
+  <div class="section-title"><T en="Free Softwares" ja="フリーソフトウェア" /></div>
 
   {rendered.map(({ sw, Content }, i) => {
     const imgWide = sw.data.imageWidthSideBySide ?? 30;
