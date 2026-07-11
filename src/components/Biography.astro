@@ -8,9 +8,9 @@ const education = allBio.filter(e => e.data.category === 'education').sort((a, b
 ---
 
 <section id="biography">
-  <div class="section-title"><T en="Biography" ja="経歴" /></div>
+  <div class="section-title"><T en="Biography" /></div>
 
-  <div class="subtitle"><T en="Professional Affiliation" ja="職歴" /></div>
+  <div class="subtitle"><T en="Professional Affiliation" /></div>
   <div class="entry-list">
     {affiliations.map((entry) => (
       <div class="entry">
@@ -23,7 +23,7 @@ const education = allBio.filter(e => e.data.category === 'education').sort((a, b
     ))}
   </div>
 
-  <div class="subtitle"><T en="Education" ja="学歴" /></div>
+  <div class="subtitle"><T en="Education" /></div>
   <div class="entry-list">
     {education.map((entry) => (
       <div class="entry">

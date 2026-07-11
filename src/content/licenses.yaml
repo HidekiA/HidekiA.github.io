@@ -44,7 +44,7 @@
     ja: その他
   items:
     - name:
-        en: "Administrative Scrivener (2001)"
+        en: "Certified Administrative Procedures Legal Specialist (2001)"
         ja: "行政書士 (2001)"
     - name:
         en: "Class 1 Medium Vehicle Driver's License (2005)"
@@ -56,23 +56,23 @@
     en: "IT (AWS)"
   items:
     - name:
-        en: "Developer - Associate (2022)"
+        en: "AWS Certified Developer – Associate (2022)"
       link: "https://www.credly.com/badges/71abbfee-cfbe-4dd2-8629-44c2b0536c71"
       badge: "/img/aws-certified-developer-associate.png"
     - name:
-        en: "Solutions Architect - Professional (2022)"
+        en: "AWS Certified Solutions Architect – Professional (2022)"
       link: "https://www.credly.com/badges/ca03f1a2-56c1-47d0-baa1-c3f73caa6519"
       badge: "/img/aws-certified-solutions-architect-professional.png"
     - name:
-        en: "DevOps Engineer - Professional (2022)"
+        en: "AWS Certified DevOps Engineer – Professional (2022)"
       link: "https://www.credly.com/badges/06d55aaf-7464-47ea-80d8-70ad0c52af8d"
       badge: "/img/aws-certified-devops-engineer-professional.png"
     - name:
-        en: "Security - Specialty (2022)"
+        en: "AWS Certified Security – Specialty (2022)"
       link: "https://www.credly.com/badges/eb4a48b1-ec93-46f5-aa69-d4eb9eaf67cf"
       badge: "/img/aws-certified-security-specialty.png"
     - name:
-        en: "Machine Learning – Specialty (2022)"
+        en: "AWS Certified Machine Learning – Specialty (2022)"
       link: "https://www.credly.com/badges/6e9b4883-c74d-46fa-b7aa-c27dd49be853"
       badge: "/img/aws-certified-machine-learning-specialty.png"
 
@@ -82,7 +82,7 @@
     en: "IT (Google Cloud)"
   items:
     - name:
-        en: "Associate Cloud Engineer (2025)"
+        en: "Google Cloud Certified – Associate Cloud Engineer (2025)"
       link: "https://www.credly.com/badges/74175bd9-6b95-4921-beb0-1cbd0ffaf7e6"
       badge: "/img/gcp-associate-cloud-engineer.png"
 
@@ -92,13 +92,13 @@
     en: "IT (IPA)"
   items:
     - name:
-        en: "Network Specialist (2012)"
+        en: "Network Specialist Examination (2012)"
         ja: "ネットワークスペシャリスト (2012)"
     - name:
-        en: "Software Development Engineer (2005)"
+        en: "Software Design & Development Engineer Examination (2005)"
         ja: "ソフトウェア開発技術者 (2005)"
     - name:
-        en: "Class 2 Information Technology Engineer (2000)"
+        en: "Class II Information Technology Engineer Examination (2000)"
         ja: "第二種情報処理技術者 (2000)"
 
 - id: cert-language

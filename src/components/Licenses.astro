@@ -8,9 +8,9 @@ const certEntries = allLicenses.filter(e => e.data.section === 'certificates');
 ---
 
 <section id="licenses">
-  <div class="section-title"><T en="Licenses & Certificates" ja="免許・資格" /></div>
+  <div class="section-title"><T en="Licenses & Certificates" /></div>
 
-  <div class="subtitle"><T en="Licenses" ja="免許" /></div>
+  <div class="subtitle"><T en="Licenses" /></div>
   <div class="license-list">
     {licenseEntries.map((entry) => (
       <div class="category-group">
@@ -24,7 +24,7 @@ const certEntries = allLicenses.filter(e => e.data.section === 'certificates');
     ))}
   </div>
 
-  <div class="subtitle"><T en="Certificates" ja="資格" /></div>
+  <div class="subtitle"><T en="Certificates" /></div>
   <div class="license-list">
     {certEntries.map((entry) => (
       <div class="category-group">

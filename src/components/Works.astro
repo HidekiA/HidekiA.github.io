@@ -13,7 +13,7 @@ const rendered = await Promise.all(
 ---
 
 <section id="works">
-  <div class="section-title"><T en="Works" ja="業績" /></div>
+  <div class="section-title"><T en="Works" /></div>
 
   {rendered.map(({ work, Content }, i) => (
     <>
@@ -36,10 +36,10 @@ const rendered = await Promise.all(
               <div class="media-item">
                 {img.link ? (
                   <a href={img.link}>
-                    <img src={img.src} alt={img.alt || ''} class="thumbnail" />
+                    <img src={img.src} alt={img.alt || ''} class="thumbnail" style={img.width ? `width: ${img.width};` : ''} />
                   </a>
                 ) : (
-                  <img src={img.src} alt={img.alt || ''} class="thumbnail" />
+                  <img src={img.src} alt={img.alt || ''} class="thumbnail" style={img.width ? `width: ${img.width};` : ''} />
                 )}
               </div>
             ))}
@@ -137,6 +137,7 @@ const rendered = await Promise.all(
   .media-item img.thumbnail {
     width: 100%;
     display: block;
+    margin: 0 auto;
     border: 1px solid #dee2e6;
     border-radius: 4px;
     padding: 4px;

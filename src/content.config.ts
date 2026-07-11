@@ -52,11 +52,13 @@ const works = defineCollection({
     image: z.object({
       src: z.string(),
       alt: z.string(),
+      width: z.string().optional(),
     }).optional(),
     images: z.array(z.object({
       src: z.string(),
       alt: z.string().optional(),
       link: z.string().optional(),
+      width: z.string().optional(),
     })).optional(),
     videos: z.array(z.string()).optional(),
     storeLinks: z.array(z.object({

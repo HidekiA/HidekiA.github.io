@@ -13,7 +13,7 @@ const rendered = await Promise.all(
 ---
 
 <section id="softwares">
-  <div class="section-title"><T en="Free Softwares" ja="フリーソフトウェア" /></div>
+  <div class="section-title"><T en="Free Softwares" /></div>
 
   {rendered.map(({ sw, Content }, i) => {
     const imgWide = sw.data.imageWidthSideBySide ?? 30;
