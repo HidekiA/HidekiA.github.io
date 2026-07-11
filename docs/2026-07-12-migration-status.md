@@ -58,6 +58,25 @@ untracked のソース一式(上記)と CLAUDE.md の変更をコミットして
 
 依存関係はインストール済み(node_modules あり、Node v24 で動作確認済み)。
 
+## 実施記録(2026-07-12)
+
+上記 1〜4 をすべて実施済み(コミット e5cf519〜d5e6f52)。
+
+- 未コミットだった移行ファイル一式をコミット
+- `.github/workflows/deploy.yml` を追加(withastro/action v3 + actions/deploy-pages v4)
+- `src/content/software.yaml` を削除
+- `package.json` 名の変更、Publications の空アンカー削除、
+  Works のロゴ・ストアバッジに `alt` 付与(storeLinks スキーマに optional な alt を追加)
+- `npm run build` で検証済み
+
+**push 前に必要な手動操作(未実施)**: GitHub リポジトリの
+Settings → Pages → Build and deployment → Source を
+「Deploy from a branch」から「**GitHub Actions**」に変更すること。
+この切替を行うまでは push しない(push すると旧サイトが壊れるため)。
+切替後に push すればワークフローがビルド・デプロイする。
+
+この後、画面(デザイン)の調整を行ってから push する予定。
+
 ## 確認済み事項(証跡)
 
 - `npm run build`: 成功(2026-07-12、Astro 6.1.x / Node 24.13.1)
