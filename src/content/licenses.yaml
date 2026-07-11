@@ -1,0 +1,143 @@
+- id: license-electronics
+  section: licenses
+  category:
+    en: Electronics
+    ja: 電気
+  items:
+    - name:
+        en: "Class 2 Electrician (2024)"
+        ja: "第二種電気工事士 (2024)"
+
+- id: license-chemistry
+  section: licenses
+  category:
+    en: Chemistry
+    ja: 化学
+  items:
+    - name:
+        en: "Hazardous Materials Handler Class B-4 (1999)"
+        ja: "危険物取扱者 乙種 第４類 (1999)"
+    - name:
+        en: "Fire Defense Equipment Officer Class B-6 (2001)"
+        ja: "消防設備士 乙種 第６類 (2001)"
+    - name:
+        en: "Fire Prevention Manager (2000)"
+        ja: "防火管理者 (2000)"
+    - name:
+        en: "Toxicant Handler (2002)"
+        ja: "一般毒物劇物取扱者 (2002)"
+
+- id: license-hygiene
+  section: licenses
+  category:
+    en: Hygiene
+    ja: 衛生
+  items:
+    - name:
+        en: "Food Sanitation Supervisor (1999)"
+        ja: "食品衛生責任者 (1999)"
+
+- id: license-misc
+  section: licenses
+  category:
+    en: Miscellaneous
+    ja: その他
+  items:
+    - name:
+        en: "Administrative Scrivener (2001)"
+        ja: "行政書士 (2001)"
+    - name:
+        en: "Class 1 Medium Vehicle Driver's License (2005)"
+        ja: "第一種中型車 運転免許 (2005)"
+
+- id: cert-aws
+  section: certificates
+  category:
+    en: "IT (AWS)"
+  items:
+    - name:
+        en: "Developer - Associate (2022)"
+      link: "https://www.credly.com/badges/71abbfee-cfbe-4dd2-8629-44c2b0536c71"
+      badge: "/img/aws-certified-developer-associate.png"
+    - name:
+        en: "Solutions Architect - Professional (2022)"
+      link: "https://www.credly.com/badges/ca03f1a2-56c1-47d0-baa1-c3f73caa6519"
+      badge: "/img/aws-certified-solutions-architect-professional.png"
+    - name:
+        en: "DevOps Engineer - Professional (2022)"
+      link: "https://www.credly.com/badges/06d55aaf-7464-47ea-80d8-70ad0c52af8d"
+      badge: "/img/aws-certified-devops-engineer-professional.png"
+    - name:
+        en: "Security - Specialty (2022)"
+      link: "https://www.credly.com/badges/eb4a48b1-ec93-46f5-aa69-d4eb9eaf67cf"
+      badge: "/img/aws-certified-security-specialty.png"
+    - name:
+        en: "Machine Learning – Specialty (2022)"
+      link: "https://www.credly.com/badges/6e9b4883-c74d-46fa-b7aa-c27dd49be853"
+      badge: "/img/aws-certified-machine-learning-specialty.png"
+
+- id: cert-gcp
+  section: certificates
+  category:
+    en: "IT (Google Cloud)"
+  items:
+    - name:
+        en: "Associate Cloud Engineer (2025)"
+      link: "https://www.credly.com/badges/74175bd9-6b95-4921-beb0-1cbd0ffaf7e6"
+      badge: "/img/gcp-associate-cloud-engineer.png"
+
+- id: cert-ipa
+  section: certificates
+  category:
+    en: "IT (IPA)"
+  items:
+    - name:
+        en: "Network Specialist (2012)"
+        ja: "ネットワークスペシャリスト (2012)"
+    - name:
+        en: "Software Development Engineer (2005)"
+        ja: "ソフトウェア開発技術者 (2005)"
+    - name:
+        en: "Class 2 Information Technology Engineer (2000)"
+        ja: "第二種情報処理技術者 (2000)"
+
+- id: cert-language
+  section: certificates
+  category:
+    en: Foreign Language
+    ja: 外国語
+  items:
+    - name:
+        en: "TOEIC 860"
+    - name:
+        en: "EIKEN Grade Pre-1 (2005)"
+        ja: "実用英語技能検定 準１級 (2005)"
+    - name:
+        en: "Kanji Kentei Grade Pre-1 (2004)"
+        ja: "日本漢字能力検定 準１級 (2004)"
+    - name:
+        en: "Diplom Deutsch in Japan 4. Klasse (2003)"
+    - name:
+        en: "Diplôme d'Aptitude Pratique au Français Niveau 5 (2007)"
+    - name:
+        en: "Chinese Proficiency Test Grade Pre-4"
+        ja: "日本中国語検定 準４級"
+
+- id: cert-misc
+  section: certificates
+  category:
+    en: Miscellaneous
+    ja: その他
+  items:
+    - name:
+        en: "JCCI Bookkeeping Grade 2 (2000) / Grade 3 (1999)"
+        ja: "日本商工会議所 簿記検定 ２級 (2000) ３級 (1999)"
+    - name:
+        en: "Color Coordinator Grade 2 (2001)"
+        ja: "カラーコーディネーター ２級 (2001)"
+    - name:
+        en: "Kyoto Tourism & Culture Test Grade 3 (2006)"
+        ja: "京都観光文化検定 ３級 (2006)"
+    - name:
+        en: "IP Management Skill Test Grade 3 (2014)"
+        ja: "知的財産管理技能検定 ３級 (2014)"

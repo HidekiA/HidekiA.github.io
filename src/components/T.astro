@@ -1,0 +1,12 @@
+---
+interface Props {
+  en: string;
+  ja?: string;
+}
+const { en, ja } = Astro.props;
+---
+{ja ? (
+  <><span data-i18n-en>{en}</span><span data-i18n-ja>{ja}</span></>
+) : (
+  <>{en}</>
+)}

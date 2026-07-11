@@ -1,0 +1,17 @@
+- id: google-home-talker
+  title: Google Home Talker MQTT
+  description: "Python code enables Google Home to talk with IFTTT and MQTT triggers."
+  link: "https://github.com/HidekiA/google-home-talker-mqtt"
+  linkLabel: Github
+  image: "https://github.com/HidekiA/google-home-talker-mqtt/blob/main/img/overview.png?raw=true"
+
+- id: browser-switch
+  title: BrowserSwitch
+  description: "BrowserSwitch enables you to open the clicked URL in different browsers depending on the domain of the URL."
+  descriptionJa: "メールやエクセルファイル等に記載されたURLをクリックした際に、そのURLに応じて異なるブラウザで開くためのソフトウェアです。"
+  links:
+    - url: "/software/browser_switch/"
+      label: English version
+    - url: "/software/browser_switch/index_ja.html"
+      label: 日本語版
+  image: "/software/browser_switch/BrowserSwitch.png"
