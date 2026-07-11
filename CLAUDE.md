@@ -20,7 +20,12 @@ This project is a migration of an existing static personal portfolio site from p
 - Dev server: `npm run dev`
 - Build for production: `npm run build`
 
+# Documentation
+- Plans, status reports, and investigation notes by Claude Code live in `docs/` as `YYYY-MM-DD-<topic>.md`.
+- Current migration status and remaining work: `docs/2026-07-12-migration-status.md`
+
 # Instructions for Claude
 - Before adding any new npm packages or major dependencies, briefly explain why they are needed and ask for confirmation.
 - When splitting files into components, ensure the logic and styling remain isolated and easy to read.
 - Keep the directory structure as flat and simple as possible. Do not create overly nested folders.
+- Do not 'git push'
