@@ -63,6 +63,7 @@ const works = defineCollection({
       src: z.string(),
       link: z.string(),
       height: z.string(),
+      alt: z.string().optional(),
     })).optional(),
   }),
 });

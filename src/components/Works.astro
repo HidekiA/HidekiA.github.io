@@ -20,7 +20,7 @@ const rendered = await Promise.all(
       <article class="work">
         {work.data.logo && (
           <div class="logo">
-            <img src={work.data.logo.src} style={`height: ${work.data.logo.height}`} />
+            <img src={work.data.logo.src} alt={work.data.title.en} style={`height: ${work.data.logo.height}`} />
           </div>
         )}
 
@@ -70,7 +70,7 @@ const rendered = await Promise.all(
           <div class="store-links">
             {work.data.storeLinks.map((store) => (
               <a href={store.link}>
-                <img src={store.src} style={`height: ${store.height}`} />
+                <img src={store.src} alt={store.alt ?? ''} style={`height: ${store.height}`} />
               </a>
             ))}
           </div>
