@@ -10,27 +10,39 @@ const education = allBio.filter(e => e.data.category === 'education').sort((a, b
 <section id="biography">
   <div class="section-title"><T en="Biography" /></div>
 
-  <div class="subtitle"><T en="Professional Affiliation" /></div>
+  <div class="subtitle"><T en="Professional Affiliation" ja="職歴" /></div>
   <div class="entry-list">
     {affiliations.map((entry) => (
-      <div class="entry">
+      <div class:list={['entry', { connected: entry.data.connected }]}>
         <div class="period">{entry.data.period}</div>
         <div class="detail">
-          <T en={entry.data.title.en} ja={entry.data.title.ja} />
-          {entry.data.subtitle && <><br /><small><T en={entry.data.subtitle.en} ja={entry.data.subtitle.ja} /></small></>}
+          <span data-i18n-en>
+            {entry.data.title.en}
+            {entry.data.subtitle && <><br /><small>{entry.data.subtitle.en}</small></>}
+          </span>
+          <span data-i18n-ja>
+            {entry.data.title.ja ?? entry.data.title.en}
+            {entry.data.subtitle?.ja && <><br /><small>{entry.data.subtitle.ja}</small></>}
+          </span>
         </div>
       </div>
     ))}
   </div>
 
-  <div class="subtitle"><T en="Education" /></div>
+  <div class="subtitle"><T en="Education" ja="学歴" /></div>
   <div class="entry-list">
     {education.map((entry) => (
-      <div class="entry">
+      <div class:list={['entry', { connected: entry.data.connected }]}>
         <div class="period">{entry.data.period}</div>
         <div class="detail">
-          <T en={entry.data.title.en} ja={entry.data.title.ja} />
-          {entry.data.subtitle && <><br /><small><T en={entry.data.subtitle.en} ja={entry.data.subtitle.ja} /></small></>}
+          <span data-i18n-en>
+            {entry.data.title.en}
+            {entry.data.subtitle && <><br /><small>{entry.data.subtitle.en}</small></>}
+          </span>
+          <span data-i18n-ja>
+            {entry.data.title.ja ?? entry.data.title.en}
+            {entry.data.subtitle?.ja && <><br /><small>{entry.data.subtitle.ja}</small></>}
+          </span>
         </div>
       </div>
     ))}
@@ -46,7 +58,15 @@ const education = allBio.filter(e => e.data.category === 'education').sort((a, b
   .entry {
     display: flex;
     gap: 1rem;
-    margin-bottom: 0.25rem;
+  }
+
+  .entry + .entry {
+    margin-top: 0.25rem;
+  }
+
+  /* connected: 直前の項目と年号の背景色を連結する */
+  .entry + .entry.connected {
+    margin-top: 0;
   }
 
   .period {
@@ -59,6 +79,7 @@ const education = allBio.filter(e => e.data.category === 'education').sort((a, b
 
   .detail {
     padding: 0.4rem 0;
+    white-space: pre-line;
   }
 
   @media (max-width: 640px) {
@@ -66,6 +87,11 @@ const education = allBio.filter(e => e.data.category === 'education').sort((a, b
       flex-direction: column;
       gap: 0;
       margin-bottom: 0.75rem;
+    }
+    /* モバイルでは年号と詳細が縦に並ぶため、背景色の連結は行わない */
+    .entry + .entry,
+    .entry + .entry.connected {
+      margin-top: 0;
     }
     .period {
       width: auto;

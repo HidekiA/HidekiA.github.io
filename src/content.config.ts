@@ -11,6 +11,8 @@ const biography = defineCollection({
     period: z.string(),
     title: i18nString,
     subtitle: i18nString.optional(),
+    // 直前の項目と年号の背景色を連結して表示する（同一組織での連続を示す）
+    connected: z.boolean().optional(),
   }),
 });
 

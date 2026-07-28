@@ -10,6 +10,7 @@
   category: affiliation
   order: 2
   period: "2022-present"
+  connected: true
   title:
     en: Panasonic Holdings Corporation
     ja: パナソニック ホールディングス株式会社
@@ -20,10 +21,9 @@
   period: "2024-present"
   title:
     en: Kyoto University
-    ja: 京都大学
+    ja: "京都大学 工学研究科 特命講師"
   subtitle:
-    en: "Specially Appointed Senior Lecturer"
-    ja: "特命講師"
+    en: "Graduate School of Engineering\nSpecially Appointed Senior Lecturer"
 
 - id: education-bachelor
   category: education
@@ -31,29 +31,28 @@
   period: "2002-2006"
   title:
     en: Bachelor of Engineering
-    ja: 工学士
+    ja: "京都大学 工学部 卒業"
   subtitle:
     en: "Faculty of Engineering, Kyoto University, Japan"
-    ja: "京都大学 工学部"
 
 - id: education-master
   category: education
   order: 2
   period: "2006-2008"
+  connected: true
   title:
     en: Master of Engineering
-    ja: 修士（工学）
+    ja: "京都大学大学院 工学研究科 修士課程 修了"
   subtitle:
     en: "Graduate School of Engineering, Kyoto University, Japan"
-    ja: "京都大学 大学院工学研究科"
 
 - id: education-phd
   category: education
   order: 3
   period: "2008-2011"
+  connected: true
   title:
     en: PhD Engineering
-    ja: 博士（工学）
+    ja: "京都大学大学院 工学研究科 博士課程 修了\n博士（工学）"
   subtitle:
     en: "Graduate School of Engineering, Kyoto University, Japan"
-    ja: "京都大学 大学院工学研究科"

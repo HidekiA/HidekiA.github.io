@@ -36,10 +36,10 @@ const rendered = await Promise.all(
               <div class="media-item">
                 {img.link ? (
                   <a href={img.link}>
-                    <img src={img.src} alt={img.alt || ''} class="thumbnail" style={img.width ? `width: ${img.width};` : ''} />
+                    <img src={img.src} alt={img.alt || ''} class="thumbnail" style={img.width ? `--thumb-width: ${img.width};` : ''} />
                   </a>
                 ) : (
-                  <img src={img.src} alt={img.alt || ''} class="thumbnail" style={img.width ? `width: ${img.width};` : ''} />
+                  <img src={img.src} alt={img.alt || ''} class="thumbnail" style={img.width ? `--thumb-width: ${img.width};` : ''} />
                 )}
               </div>
             ))}
@@ -142,6 +142,12 @@ const rendered = await Promise.all(
     border-radius: 4px;
     padding: 4px;
     background: white;
+  }
+
+  @media (min-width: 640px) {
+    .media-item img.thumbnail {
+      width: var(--thumb-width, 100%);
+    }
   }
 
   .video-wrapper {
