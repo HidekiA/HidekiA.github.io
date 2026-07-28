@@ -1,10 +1,10 @@
 ---
 const navItems = [
-  { en: 'Hideki AOYAMA', ja: '青山 秀紀', href: '#top' },
-  { en: 'Works', ja: '業績', href: '#works' },
-  { en: 'Softwares', ja: 'ソフトウェア', href: '#softwares' },
-  { en: 'Licenses', ja: '資格', href: '#licenses' },
-  { en: 'Publications', ja: '論文', href: '#publications' },
+  { en: 'Hideki AOYAMA', href: '#top' },
+  { en: 'Works', href: '#works' },
+  { en: 'Softwares', href: '#softwares' },
+  { en: 'Licenses', href: '#licenses' },
+  { en: 'Publications', href: '#publications' },
 ];
 ---
 
@@ -21,10 +21,7 @@ const navItems = [
     <ul class="nav-links">
       {navItems.map((item) => (
         <li>
-          <a href={item.href}>
-            <span data-i18n-en>{item.en}</span>
-            <span data-i18n-ja>{item.ja}</span>
-          </a>
+          <a href={item.href}>{item.en}</a>
         </li>
       ))}
     </ul>
