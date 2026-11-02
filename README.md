@@ -17,7 +17,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/HidekiA/HidekiA.github.io.git](https://github.com/HidekiA/HidekiA.github.io.git)
+   git clone https://github.com/HidekiA/HidekiA.github.io.git
    cd HidekiA.github.io
    ```
 
