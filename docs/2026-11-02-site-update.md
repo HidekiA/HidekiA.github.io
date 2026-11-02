@@ -95,13 +95,14 @@ Claude Code による作業記録。前回の状況は `docs/2026-07-12-migratio
   Works 先頭の Physical AI 項目、IEC / LinkRay の英語表記統一、Softwares の画像なし表示。
 - headless Firefox でデスクトップ幅（1280px）・モバイル幅（400px）× EN / JA の表示を確認。
 
-## 現在の状態と次の手順
+## デプロイ結果（2026-11-02）
 
-- GitHub Pages の Source は **GitHub Actions に切替済み**（API で `build_type: workflow` を確認）。
-- `origin/master` は旧 HTML サイトのまま（本番も旧サイトを配信中）。
-  ローカル `master` は 20 コミット先行 ＋ 今回の未コミット変更。
-- 今回の変更をコミットして push すればワークフローがビルド・デプロイする（push はユーザーが行う）。
-- 本番切替後、`_old_site/`（.gitignore 済み）は削除してよい。
+- ユーザーの指示により、2 コミット（3ab1759 依存関係・ワークフロー更新、b5b6004 コンテンツ更新）を
+  `origin/master` に push。GitHub Actions（run 41444085452）は build 27 秒・deploy 10 秒で成功。
+- 本番 https://hidekia.github.io で新サイトの配信を確認（旧 Bootstrap サイトは置き換わった）:
+  新タイトル・被引用数・アイコン画像 4 枚（200）・CSS・`/software/browser_switch/` の配信、
+  削除した旧画像の 404 を確認。
+- `_old_site/`（.gitignore 済み）は本番切替が完了したので削除してよい。
 
 ## 運用メモ
 
