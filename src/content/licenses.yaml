@@ -92,14 +92,14 @@
     en: "IT (IPA)"
   items:
     - name:
-        en: "Network Specialist Examination (2012)"
-        ja: "ネットワークスペシャリスト (2012)"
+        en: "Class II Information Technology Engineer (2000)"
+        ja: "第二種情報処理技術者 (2000)"
     - name:
-        en: "Software Design & Development Engineer Examination (2005)"
+        en: "Software Design & Development Engineer (2005)"
         ja: "ソフトウェア開発技術者 (2005)"
     - name:
-        en: "Class II Information Technology Engineer Examination (2000)"
-        ja: "第二種情報処理技術者 (2000)"
+        en: "Network Specialist (2012)"
+        ja: "ネットワークスペシャリスト (2012)"
 
 - id: cert-language
   section: certificates

@@ -23,6 +23,7 @@ This project is a migration of an existing static personal portfolio site from p
 # Documentation
 - Plans, status reports, and investigation notes by Claude Code live in `docs/` as `YYYY-MM-DD-<topic>.md`.
 - Current migration status and remaining work: `docs/2026-07-12-migration-status.md`
+- Latest update notes (content changes, Astro 7 upgrade, Node requirement): `docs/2026-11-02-site-update.md`
 
 # Instructions for Claude
 - Before adding any new npm packages or major dependencies, briefly explain why they are needed and ask for confirmation.

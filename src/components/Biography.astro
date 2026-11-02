@@ -14,7 +14,7 @@ const education = allBio.filter(e => e.data.category === 'education').sort((a, b
   <div class="entry-list">
     {affiliations.map((entry) => (
       <div class:list={['entry', { connected: entry.data.connected }]}>
-        <div class="period">{entry.data.period}</div>
+        <div class="period"><T en={entry.data.period.en} ja={entry.data.period.ja} /></div>
         <div class="detail">
           <span data-i18n-en>
             {entry.data.title.en}
@@ -33,7 +33,7 @@ const education = allBio.filter(e => e.data.category === 'education').sort((a, b
   <div class="entry-list">
     {education.map((entry) => (
       <div class:list={['entry', { connected: entry.data.connected }]}>
-        <div class="period">{entry.data.period}</div>
+        <div class="period"><T en={entry.data.period.en} ja={entry.data.period.ja} /></div>
         <div class="detail">
           <span data-i18n-en>
             {entry.data.title.en}
@@ -72,6 +72,7 @@ const education = allBio.filter(e => e.data.category === 'education').sort((a, b
   .period {
     flex-shrink: 0;
     width: 140px;
+    white-space: nowrap;
     padding: 0.4rem 0.6rem;
     background-color: #e8f0ff;
     font-size: 0.95rem;

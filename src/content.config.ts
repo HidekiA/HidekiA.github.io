@@ -8,7 +8,8 @@ const biography = defineCollection({
   schema: z.object({
     category: z.enum(['affiliation', 'education']),
     order: z.number(),
-    period: z.string(),
+    // 文字列（両言語共通）または { en, ja }（例: "2022-present" / "2022-現在"）
+    period: z.union([z.string(), i18nString]).transform((p) => (typeof p === 'string' ? { en: p } : p)),
     title: i18nString,
     subtitle: i18nString.optional(),
     // 直前の項目と年号の背景色を連結して表示する（同一組織での連続を示す）
@@ -21,9 +22,6 @@ const software = defineCollection({
   schema: z.object({
     title: z.string(),
     order: z.number(),
-    image: z.string(),
-    imageWidthSideBySide: z.number().optional(),
-    imageWidthStacked: z.number().optional(),
   }),
 });
 
@@ -68,6 +66,12 @@ const works = defineCollection({
       link: z.string(),
       height: z.string(),
       alt: z.string().optional(),
+    })).optional(),
+    // アプリアイコン等の正方形タイル（横4列、狭い画面では2列）。リンク先と alt は言語別
+    icons: z.array(z.object({
+      src: z.string(),
+      alt: i18nString,
+      link: i18nString,
     })).optional(),
   }),
 });

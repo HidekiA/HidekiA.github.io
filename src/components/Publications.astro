@@ -10,9 +10,8 @@ import T from './T.astro';
   <ol class="paper-list">
     {publications.map((pub) => (
       <li>
-        {pub.authors},
-        &ldquo;{pub.title},&rdquo;
-        {pub.venue}
+        {/* 1 行にまとめる: Astro 7 (compressHTML: 'jsx') は改行を挟んだ式の前後の空白を削除するため */}
+        {pub.authors}, &ldquo;{pub.title},&rdquo; {pub.venue}
         {pub.links.map((link) => (
           <> [{('url' in link && link.url) ? <a href={link.url}>{link.label}</a> : link.label}]</>
         ))}
@@ -29,8 +28,8 @@ import T from './T.astro';
     <div class="scholar-body">
       <h3>Hideki AOYAMA (青山 秀紀)</h3>
       <p>
-        Panasonic / Real-AI Team<br />Cited by: 4,564<br />
-        <small>Machine Learning / Pattern Recognition / Visible Light Communication / Computer Vision / Ensemble Learning / Reinforcement Learning / VLM / Humanoid Robot</small>
+        Panasonic / Real-AI Team<br />Cited by: 4,628<br />
+        <small>Machine Learning / Pattern Recognition / Visible Light Communication / Computer Vision / Ensemble Learning / Reinforcement Learning / VLM / VLA / Humanoid Robot</small>
       </p>
     </div>
   </div>

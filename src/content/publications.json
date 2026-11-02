@@ -1,15 +1,15 @@
 [
   {
-    "authors": "Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano",
+    "authors": "Shiyao Ding, Fumito Uwano, Hideki Aoyama, and Donghui Lin",
     "title": "Delivery Robot Routing Problems Challenge",
     "venue": "The 25th International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS2026), Paphos, Cyprus, 25-29 May 2026.",
-    "links": [{ "label": "HP", "url": "https://www.drp-challenge.com" }]
+    "links": [{ "label": "HP", "url": "https://www.drp-challenge.com" }, { "label": "HP2", "url": "https://cyprusconferences.org/aamas2026/competitions/#DRP" }]
   },
   {
-    "authors": "Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano",
+    "authors": "Shiyao Ding, Fumito Uwano, Hideki Aoyama, and Donghui Lin",
     "title": "Drone Routing Problems Challenge",
-    "venue": "The 25th International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS2026), Paphos, Cyprus, 25-29 May 2026.",
-    "links": [{ "label": "Accepted" }]
+    "venue": "The 25th International Conference on Autonomous Agents and Multi-Agent Systems (AAMAS2026), pp. 4080-4082, Paphos, Cyprus, 24 May 2026.",
+    "links": [{ "label": "DOI", "url": "https://doi.org/10.65109/HXAJ9978" }]
   },
   {
     "authors": "Shiyao Ding, Hideki Aoyama, Donghui Lin, and Fumito Uwano",

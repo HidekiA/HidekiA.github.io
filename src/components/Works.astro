@@ -15,70 +15,91 @@ const rendered = await Promise.all(
 <section id="works">
   <div class="section-title"><T en="Works" /></div>
 
-  {rendered.map(({ work, Content }, i) => (
-    <>
-      <article class="work">
-        {work.data.logo && (
-          <div class="logo">
-            <img src={work.data.logo.src} alt={work.data.title.en} style={`height: ${work.data.logo.height}`} />
-          </div>
-        )}
+  {rendered.map(({ work, Content }, i) => {
+    const hasMedia = Boolean(work.data.images?.length || work.data.image || work.data.videos?.length);
+    return (
+      <>
+        <article class="work">
+          {work.data.logo && (
+            <div class="logo">
+              <img src={work.data.logo.src} alt={work.data.title.en} style={`height: ${work.data.logo.height}`} />
+            </div>
+          )}
 
-        {!work.data.logo && <h3 class="work-title"><T en={work.data.title.en} ja={work.data.title.ja} /></h3>}
+          {!work.data.logo && <h3 class="work-title"><T en={work.data.title.en} ja={work.data.title.ja} /></h3>}
 
-        <div class={`work-content ${work.data.contentLayout === 'side-by-side' ? 'side-by-side' : ''}`}>
-          <div class="work-body">
-            <Content />
-          </div>
+          <div class:list={['work-content', { 'side-by-side': work.data.contentLayout === 'side-by-side' }]}>
+            <div class="work-body">
+              <Content />
+            </div>
 
-          <div class="media-grid">
-            {work.data.images?.map((img) => (
-              <div class="media-item">
-                {img.link ? (
-                  <a href={img.link}>
-                    <img src={img.src} alt={img.alt || ''} class="thumbnail" style={img.width ? `--thumb-width: ${img.width};` : ''} />
-                  </a>
-                ) : (
-                  <img src={img.src} alt={img.alt || ''} class="thumbnail" style={img.width ? `--thumb-width: ${img.width};` : ''} />
-                )}
-              </div>
-            ))}
-
-            {work.data.image && (
-              <div class="media-item">
-                {work.data.link ? (
-                  <a href={work.data.link}>
-                    <img src={work.data.image.src} alt={work.data.image.alt} class="thumbnail" />
-                  </a>
-                ) : (
-                  <img src={work.data.image.src} alt={work.data.image.alt} class="thumbnail" />
-                )}
+            {work.data.icons && work.data.icons.length > 0 && (
+              <div class="icon-grid">
+                {work.data.icons.map((icon) => (
+                  <div class="icon-item">
+                    {/* 言語ごとにリンク先が異なるため、EN/JA のアンカーを両方出力し CSS で片方だけ表示する */}
+                    <a href={icon.link.en} title={icon.alt.en} data-i18n-en>
+                      <img src={icon.src} alt={icon.alt.en} width="512" height="512" />
+                    </a>
+                    <a href={icon.link.ja ?? icon.link.en} title={icon.alt.ja ?? icon.alt.en} data-i18n-ja>
+                      <img src={icon.src} alt={icon.alt.ja ?? icon.alt.en} width="512" height="512" />
+                    </a>
+                  </div>
+                ))}
               </div>
             )}
 
-            {work.data.videos?.map((url) => (
-              <div class="media-item">
-                <div class="video-wrapper">
-                  <iframe src={url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+            {hasMedia && (
+              <div class="media-grid">
+                {work.data.images?.map((img) => (
+                  <div class="media-item">
+                    {img.link ? (
+                      <a href={img.link}>
+                        <img src={img.src} alt={img.alt || ''} class="thumbnail" style={img.width ? `--thumb-width: ${img.width};` : ''} />
+                      </a>
+                    ) : (
+                      <img src={img.src} alt={img.alt || ''} class="thumbnail" style={img.width ? `--thumb-width: ${img.width};` : ''} />
+                    )}
+                  </div>
+                ))}
 
-        {work.data.storeLinks && work.data.storeLinks.length > 0 && (
-          <div class="store-links">
-            {work.data.storeLinks.map((store) => (
-              <a href={store.link}>
-                <img src={store.src} alt={store.alt ?? ''} style={`height: ${store.height}`} />
-              </a>
-            ))}
+                {work.data.image && (
+                  <div class="media-item">
+                    {work.data.link ? (
+                      <a href={work.data.link}>
+                        <img src={work.data.image.src} alt={work.data.image.alt} class="thumbnail" />
+                      </a>
+                    ) : (
+                      <img src={work.data.image.src} alt={work.data.image.alt} class="thumbnail" />
+                    )}
+                  </div>
+                )}
+
+                {work.data.videos?.map((url) => (
+                  <div class="media-item">
+                    <div class="video-wrapper">
+                      <iframe src={url} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-        )}
-      </article>
-      {i < rendered.length - 1 && <hr />}
-    </>
-  ))}
+
+          {work.data.storeLinks && work.data.storeLinks.length > 0 && (
+            <div class="store-links">
+              {work.data.storeLinks.map((store) => (
+                <a href={store.link}>
+                  <img src={store.src} alt={store.alt ?? ''} style={`height: ${store.height}`} />
+                </a>
+              ))}
+            </div>
+          )}
+        </article>
+        {i < rendered.length - 1 && <hr />}
+      </>
+    );
+  })}
 </section>
 
 <style>
@@ -124,6 +145,38 @@ const rendered = await Promise.all(
   }
   .work-body :global(p) {
     margin: 0.3rem 0;
+    /* MDX 内の改行をそのまま改行として表示する（旧サイトの <br> 相当） */
+    white-space: pre-line;
+  }
+
+  /* アプリアイコン等の正方形タイル: 横 4 列、狭い画面では 2 列 */
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    max-width: 720px;
+    margin: 1rem auto 0;
+  }
+
+  .icon-item a {
+    display: block;
+  }
+
+  .icon-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #dee2e6;
+    border-radius: 18%;
+    background: white;
+  }
+
+  @media (max-width: 640px) {
+    .icon-grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 360px;
+    }
   }
 
   .media-grid {
@@ -161,6 +214,7 @@ const rendered = await Promise.all(
     left: 0;
     width: 100%;
     height: 100%;
+    border: 0;
   }
 
   .store-links {
